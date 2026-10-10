@@ -11,9 +11,12 @@ export default function SeoPage({ page }) {
   const isBusFoodPage = page.category === "Bus Food";
   const h1Heading = page.h1 || page.name || page.title;
 
+  // Show the top CTA only on the main Bangalore food delivery page.
+  const showTopCta = page.url === "/food/bangalore/";
+
   return (
     <>
-      {/* SEO metadata: browser title and description */}
+      {/* SEO metadata */}
       <SeoHead
         title={page.title}
         description={page.description}
@@ -24,14 +27,18 @@ export default function SeoPage({ page }) {
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <Link to="/">Home</Link>
         {" / "}
-        {page.category && <>{page.category}{" / "}</>}
+        {page.category && (
+          <>
+            {page.category}
+            {" / "}
+          </>
+        )}
         <span>{page.name || h1Heading}</span>
       </nav>
 
       {/* Hero section */}
       <section className="hero">
         <div className="hero-inner">
-          {/* Visible H1 heading, independent of browser title */}
           <h1>{h1Heading}</h1>
 
           {page.intro && (
@@ -43,6 +50,18 @@ export default function SeoPage({ page }) {
               ) : (
                 <p>{page.intro}</p>
               )}
+            </div>
+          )}
+
+          {/* Top CTA button */}
+          {showTopCta && (
+            <div className="top-cta">
+              <Link
+                className="cta-button top-cta-button"
+                to="/food/homemade-food/bangalore/"
+              >
+                Order Food
+              </Link>
             </div>
           )}
         </div>
@@ -94,7 +113,11 @@ export default function SeoPage({ page }) {
                   <img
                     className="seo-food-image"
                     src={subsection.image.src}
-                    alt={subsection.image.alt || subsection.heading || ""}
+                    alt={
+                      subsection.image.alt ||
+                      subsection.heading ||
+                      ""
+                    }
                     loading="lazy"
                     width="440"
                     height="300"
@@ -173,7 +196,7 @@ export default function SeoPage({ page }) {
               </div>
             )}
 
-            {/* Section images not attached to subsections */}
+            {/* Section images */}
             {section.images?.length > 0 && (
               <div className="seo-images">
                 {section.images.map((image, imageIndex) => (
@@ -257,7 +280,7 @@ export default function SeoPage({ page }) {
         </section>
       )}
 
-      {/* Page-level call to action */}
+      {/* Bottom CTA */}
       {page.cta && (
         <section className="content cta-section">
           <h2>{page.cta.heading}</h2>

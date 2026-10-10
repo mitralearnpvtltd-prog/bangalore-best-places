@@ -691,5 +691,25 @@ header.header {
   margin-bottom: 12px;
 }
 
+.top-cta {
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.top-cta-button {
+  display: inline-block;
+  padding: 14px 26px;
+  background-color: #e85d04;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.top-cta-button:hover {
+  background-color: #c94c00;
+}
+
 
 
