@@ -1,17 +1,204 @@
 export const seoPages = [
-  {
-    category: "Food",
-    subcategory: "Core",
-    name: "Food Delivery Bangalore",
-    title: "Food Delivery in Bangalore – Fresh & Homemade Food",
-    description:
-      "Order fresh homemade food in Bangalore. Get delicious meals delivered to your home, office, hotel or bus journey.",
-    url: "/food/bangalore/",
-    intro:
-      "From home-style meals to regional favourites, order freshly cooked food across Bangalore and get it delivered where you need it.",
-    paragraph:
-      "Finding fresh and convenient food in Bangalore is easier with food delivery that brings home-style meals directly to you. Whether you are at home, working from an office, staying in a hotel or preparing for a journey, you can explore a variety of freshly prepared meals from local cooks and home chefs. Homemade food offers a comforting alternative to everyday restaurant meals, with familiar flavours, regional recipes and freshly selected ingredients. From traditional Karnataka dishes to everyday lunch and dinner options, there are meals suitable for different tastes and occasions. Food delivery across Bangalore helps you enjoy a freshly prepared meal without spending time cooking or travelling to a restaurant. You can choose meals based on your preferences and location and have them delivered conveniently. For people looking for authentic homemade food in Bangalore, local food delivery provides an easy way to discover delicious meals prepared with care.",
-  },
+  
+
+{
+  category: "Food",
+  subcategory: "Core",
+  name: "Food Delivery in Bangalore",
+  h1: "Order Your Favourite Food Online in Bangalore",
+  title: "Food Delivery in Bangalore | Fresh Meals",
+  description:
+    "Explore food delivery in Bangalore, including South Indian meals, biryani, regional dishes and everyday food options. Check availability near you.",
+  url: "/food/bangalore/",
+
+  primaryKeyword: "food delivery in Bangalore",
+
+  secondaryKeywords: [
+    "food delivery Bangalore",
+    "fresh food delivery Bangalore",
+    "lunch delivery Bangalore",
+    "dinner delivery Bangalore",
+    "South Indian food delivery Bangalore",
+    "homemade food delivery Bangalore",
+    "Karnataka food Bangalore",
+    "food for bus travellers Bangalore",
+  ],
+
+  intro: [
+    "Looking for food delivery in Bangalore? Explore food options for everyday lunches, family dinners, office breaks and travel. From South Indian favourites to biryani, regional Karnataka dishes, snacks and regular meals, there are different types of food to consider based on your preferences.",
+    "Whether you need breakfast before work, lunch during a busy day or dinner at home, browsing food categories can help you discover suitable choices. Menu options and serving sizes depend on the food provider.",
+    "Use Food Hub to explore the available food options and check the details for your location. Delivery coverage, prices, menu choices and timings may vary, so review the information provided before placing an order.",
+  ],
+
+  paragraph:
+    "Food delivery in Bangalore offers a convenient way to explore meals from different cuisines. Depending on availability, you may find South Indian breakfast, North Indian dishes, biryani, Karnataka specialities, snacks and everyday lunch or dinner options. Food delivery can be useful for people at home, working professionals, students and families planning meals around their schedules. Check the available menu, prices and delivery details to choose an option that suits your preferences and location.",
+
+  sections: [
+    {
+      heading: "Why Choose Food Delivery in Bangalore?",
+      paragraphs: [
+        "Food delivery in Bangalore helps people explore meal options for different routines, from busy office days to relaxed meals at home. Browse available menus and compare dishes, prices and delivery details before choosing.",
+        "Food Hub helps you explore food options in one place. Availability, delivery coverage and timings depend on the provider and your location.",
+      ],
+    },
+    {
+  heading: "What Food Can You Order?",
+  subsections: [
+    {
+      heading: "South Indian Food",
+      paragraphs: [
+        "Explore familiar South Indian dishes, including breakfast items, rice meals and other regional favourites where available.",
+      ],
+      image: {
+        src: "/images/south-indian-food.jpg",
+        alt: "South Indian food options in Bangalore",
+      },
+    },
+    {
+      heading: "North Indian Food",
+      paragraphs: [
+        "Browse North Indian meal options such as curries, breads and meal combinations, depending on the available menu.",
+      ],
+      image: {
+        src: "/images/north-indian-food.jpg",
+        alt: "North Indian meals including roti and curry",
+      },
+    },
+    {
+      heading: "Biryani",
+      paragraphs: [
+        "Check available biryani options and review portion sizes, ingredients and prices before ordering.",
+      ],
+      image: {
+        src: "/images/biryani.jpg",
+        alt: "Biryani meal available to explore",
+      },
+    },
+    {
+      heading: "Healthy and Everyday Meals",
+      paragraphs: [
+        "Look for everyday lunch and dinner choices that fit your preferences and schedule. Review menu details to understand the ingredients and serving options.",
+      ],
+      image: {
+        src: "/images/healthy-meals.jpg",
+        alt: "Healthy everyday meal options",
+      },
+    },
+    {
+      heading: "Karnataka Food and Snacks",
+      paragraphs: [
+        "Discover Karnataka-style dishes and snacks when listed by available food providers.",
+      ],
+      image: {
+        src: "/images/karnataka-food.jpg",
+        alt: "Traditional Karnataka food and snacks",
+      },
+    },
+  ],
+},  
+    {
+      heading: "Food Delivery Across Bangalore",
+      paragraphs: [
+        "Food options and delivery coverage can vary across Bangalore neighbourhoods. Select your delivery location where supported and check which menus and delivery timings are available for your area.",
+      ],
+    },
+    {
+      heading: "How Food Hub Works",
+      subsections: [
+        {
+          heading: "Choose Your Food",
+          paragraphs: [
+            "Browse available food categories and review menu descriptions.",
+          ],
+        },
+        {
+          heading: "Select Your Delivery Location",
+          paragraphs: [
+            "Provide your delivery location where supported and check availability.",
+          ],
+        },
+        {
+          heading: "Check Delivery Timings",
+          paragraphs: [
+            "Review available delivery times and ordering requirements before continuing.",
+          ],
+        },
+        {
+          heading: "Review Your Order",
+          paragraphs: [
+            "Confirm the selected items, prices and delivery details before placing an order.",
+          ],
+        },
+      ],
+    },
+    {
+      heading: "Food for Different Occasions",
+      paragraphs: [
+        "Explore available options for office lunches, family dinners, study breaks and everyday meals. The right choice depends on your preferences, budget and the menus available in your area.",
+      ],
+    },
+    {
+      heading: "Food for Bus Travellers",
+      paragraphs: [
+        "If you are travelling by bus, check whether food ordering or delivery is available for your route, boarding point or stop. Confirm the instructions and timing before placing an order.",
+      ],
+    },
+    {
+      heading: "Frequently Asked Questions",
+      faqs: [
+        {
+          question: "How can I explore food delivery in Bangalore?",
+          answer:
+            "Browse the available food categories on Food Hub and check menus and delivery details for your location.",
+        },
+        {
+          question: "What types of food can I find?",
+          answer:
+            "Depending on availability, options may include South Indian food, North Indian dishes, biryani, Karnataka specialities and everyday meals.",
+        },
+        {
+          question: "Is lunch delivery available in Bangalore?",
+          answer:
+            "Lunch options and delivery times depend on the food provider and your delivery location.",
+        },
+        {
+          question: "Can I order dinner through Food Hub?",
+          answer:
+            "Check the available menus and delivery timings to see which dinner options are offered for your location.",
+        },
+        {
+          question: "Is homemade food available?",
+          answer:
+            "Homemade food may be available from listed providers. Explore our homemade food page for more information.",
+        },
+        {
+          question: "Can bus travellers order food?",
+          answer:
+            "Options depend on the service, route or stop. Check the relevant delivery details before ordering.",
+        },
+        {
+          question: "Do delivery prices and timings vary?",
+          answer:
+            "Yes. Prices, delivery coverage and timings may vary by provider, menu and location.",
+        },
+      ],
+    },
+    {
+      heading: "Explore Food Delivery in Bangalore",
+      paragraphs: [
+        "Browse available food categories, compare menu details and check delivery availability for your location.",
+      ],
+      cta: "Explore Food Delivery in Bangalore",
+    },
+  ],
+
+  relatedLinks: [
+    {
+      label: "Homemade Food Delivery in Bangalore",
+      url: "/food/homemade-food/bangalore/",
+    },
+  ],
+},
 
   {
     category: "Food",

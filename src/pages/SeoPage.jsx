@@ -13,19 +13,25 @@ export default function SeoPage({ page }) {
 
   return (
     <>
+      {/* SEO metadata: browser title and description */}
       <SeoHead
         title={page.title}
         description={page.description}
         url={page.url}
       />
 
+      {/* Breadcrumb navigation */}
       <nav className="breadcrumb" aria-label="Breadcrumb">
-        <Link to="/">Home</Link> / {page.category} /{" "}
-        <span>{page.name}</span>
+        <Link to="/">Home</Link>
+        {" / "}
+        {page.category && <>{page.category}{" / "}</>}
+        <span>{page.name || h1Heading}</span>
       </nav>
 
+      {/* Hero section */}
       <section className="hero">
         <div className="hero-inner">
+          {/* Visible H1 heading, independent of browser title */}
           <h1>{h1Heading}</h1>
 
           {page.intro && (
@@ -44,32 +50,80 @@ export default function SeoPage({ page }) {
         {isBusFoodPage && <Journey />}
       </section>
 
+      {/* Main page content */}
       <section className="content">
         {page.sections?.map((section, index) => (
           <section className="seo-section" key={index}>
             <h2>{section.heading}</h2>
 
-            {/* Display section paragraphs */}
+            {/* Section paragraphs */}
             {section.paragraphs?.map((paragraph, paragraphIndex) => (
               <p key={paragraphIndex}>{paragraph}</p>
             ))}
 
-            {/* Display a single section text */}
-            {section.text && <p>{section.text}</p>}
-
-            {/* Display section items */}
-            {section.items?.length > 0 && (
-              <div className="seo-items">
-                {section.items.map((item, itemIndex) => (
-                  <div className="seo-item" key={itemIndex}>
-                    <h3>{item.heading}</h3>
-                    <p>{item.text}</p>
-                  </div>
-                ))}
+            {/* Section call to action */}
+            {section.cta && (
+              <div className="cta-section">
+                <p>{section.cta}</p>
+                <Link
+                  className="cta-button"
+                  to="/food/homemade-food/bangalore/"
+                >
+                  Explore Homemade Food
+                </Link>
               </div>
             )}
 
-            {/* Display bullet points */}
+            {section.text && <p>{section.text}</p>}
+
+            {/* Subsections with alternating images */}
+            {section.subsections?.map((subsection, subsectionIndex) => (
+              <div
+                className={
+                  subsection.image
+                    ? `food-row ${
+                        subsectionIndex % 2 === 1
+                          ? "food-row-reverse"
+                          : ""
+                      }`
+                    : "food-row food-row-text-only"
+                }
+                key={subsection.heading || subsectionIndex}
+              >
+                {subsection.image && (
+                  <img
+                    className="seo-food-image"
+                    src={subsection.image.src}
+                    alt={subsection.image.alt || subsection.heading || ""}
+                    loading="lazy"
+                    width="440"
+                    height="300"
+                  />
+                )}
+
+                <div className="food-row-content">
+                  {subsection.heading && <h3>{subsection.heading}</h3>}
+
+                  {subsection.paragraphs?.map(
+                    (paragraph, paragraphIndex) => (
+                      <p key={paragraphIndex}>{paragraph}</p>
+                    )
+                  )}
+
+                  {subsection.text && <p>{subsection.text}</p>}
+                </div>
+              </div>
+            ))}
+
+            {/* Section FAQs */}
+            {section.faqs?.map((faq, faqIndex) => (
+              <div key={faq.question || faqIndex}>
+                <h3>{faq.question}</h3>
+                <p>{faq.answer}</p>
+              </div>
+            ))}
+
+            {/* Bullet points */}
             {section.bullets?.length > 0 && (
               <ul className="features">
                 {section.bullets.map((bullet, bulletIndex) => (
@@ -78,7 +132,7 @@ export default function SeoPage({ page }) {
               </ul>
             )}
 
-            {/* Display tables */}
+            {/* Tables */}
             {section.table?.length > 0 && (
               <div className="seo-table-wrapper">
                 <table className="seo-table">
@@ -119,16 +173,18 @@ export default function SeoPage({ page }) {
               </div>
             )}
 
-            {/* Display section images */}
+            {/* Section images not attached to subsections */}
             {section.images?.length > 0 && (
               <div className="seo-images">
                 {section.images.map((image, imageIndex) => (
                   <figure key={imageIndex}>
                     <img
+                      className="seo-gallery-image"
                       src={image.src}
                       alt={image.alt || ""}
                       loading="lazy"
                     />
+
                     {image.caption && (
                       <figcaption>{image.caption}</figcaption>
                     )}
@@ -148,16 +204,18 @@ export default function SeoPage({ page }) {
         )}
       </section>
 
-      {/* Display page-level images */}
+      {/* Page-level images */}
       {page.images?.length > 0 && (
         <section className="content seo-images">
           {page.images.map((image, index) => (
             <figure key={index}>
               <img
+                className="seo-gallery-image"
                 src={image.src}
                 alt={image.alt || ""}
                 loading="lazy"
               />
+
               {image.caption && (
                 <figcaption>{image.caption}</figcaption>
               )}
@@ -166,15 +224,15 @@ export default function SeoPage({ page }) {
         </section>
       )}
 
-      {/* Display internal links */}
-      {page.internalLinks?.length > 0 && (
+      {/* Related internal links */}
+      {page.relatedLinks?.length > 0 && (
         <section className="content">
           <h2>
             {page.internalLinksHeading || "Explore Related Pages"}
           </h2>
 
           <ul className="related">
-            {page.internalLinks.map((link, index) => (
+            {page.relatedLinks.map((link, index) => (
               <li key={index}>
                 <Link to={link.url}>{link.label}</Link>
               </li>
@@ -183,7 +241,7 @@ export default function SeoPage({ page }) {
         </section>
       )}
 
-      {/* Display FAQs */}
+      {/* Page-level FAQs */}
       {page.faqs?.length > 0 && (
         <section className="content">
           <h2>Frequently Asked Questions</h2>
@@ -199,7 +257,7 @@ export default function SeoPage({ page }) {
         </section>
       )}
 
-      {/* Display call-to-action */}
+      {/* Page-level call to action */}
       {page.cta && (
         <section className="content cta-section">
           <h2>{page.cta.heading}</h2>
