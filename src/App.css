@@ -653,4 +653,43 @@ header.header {
   }
 }
 
+/* HOMEPAGE STYLES */
+
+.hero-inner .btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 24px;
+  background: #e85d04;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.hero-inner .btn:hover {
+  background: #c94c00;
+}
+
+.group {
+  margin-bottom: 32px;
+}
+
+.group h2 {
+  margin-top: 28px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e9a825;
+}
+
+.group .related {
+  padding: 20px;
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.group .related li {
+  margin-bottom: 12px;
+}
+
+
 
