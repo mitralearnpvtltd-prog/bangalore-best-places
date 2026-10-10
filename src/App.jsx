@@ -10,9 +10,7 @@ import {
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 
-import Home from "./pages/Home.jsx";
 import SeoPage from "./pages/SeoPage.jsx";
-
 import { seoPages } from "./data/seoPages.js";
 
 import "./App.css";
@@ -45,6 +43,10 @@ function NotFound() {
 }
 
 export default function App() {
+  const foodPage = seoPages.find(
+    (page) => page.url === "/food/bangalore/"
+  );
+
   return (
     <>
       <ScrollToTop />
@@ -53,7 +55,16 @@ export default function App() {
 
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              foodPage ? (
+                <SeoPage page={foodPage} />
+              ) : (
+                <NotFound />
+              )
+            }
+          />
 
           {seoPages.map((page) => (
             <Route
