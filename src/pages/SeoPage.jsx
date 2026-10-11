@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import SeoHead from "../components/SeoHead";
 import Journey from "../components/Journey";
@@ -11,8 +10,11 @@ export default function SeoPage({ page }) {
   const isBusFoodPage = page.category === "Bus Food";
   const h1Heading = page.h1 || page.name || page.title;
 
-  // Show the top CTA only on the main Bangalore food delivery page.
-  const showTopCta = page.url === "/food/bangalore/";
+  // Show the top CTA on the main Bangalore food page
+  // and the Home Chefs Bangalore page.
+  const showTopCta =
+    page.url === "/food/bangalore/" ||
+    page.url === "/food/home-chefs/bangalore/";
 
   return (
     <>
@@ -27,12 +29,14 @@ export default function SeoPage({ page }) {
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <Link to="/">Home</Link>
         {" / "}
+
         {page.category && (
           <>
             {page.category}
             {" / "}
           </>
         )}
+
         <span>{page.name || h1Heading}</span>
       </nav>
 
@@ -73,7 +77,7 @@ export default function SeoPage({ page }) {
       <section className="content">
         {page.sections?.map((section, index) => (
           <section className="seo-section" key={index}>
-            <h2>{section.heading}</h2>
+            {section.heading && <h2>{section.heading}</h2>}
 
             {/* Section paragraphs */}
             {section.paragraphs?.map((paragraph, paragraphIndex) => (
@@ -84,6 +88,7 @@ export default function SeoPage({ page }) {
             {section.cta && (
               <div className="cta-section">
                 <p>{section.cta}</p>
+
                 <Link
                   className="cta-button"
                   to="/food/homemade-food/bangalore/"
@@ -95,7 +100,7 @@ export default function SeoPage({ page }) {
 
             {section.text && <p>{section.text}</p>}
 
-            {/* Subsections with alternating images */}
+            {/* Subsections with optional images */}
             {section.subsections?.map((subsection, subsectionIndex) => (
               <div
                 className={
@@ -125,7 +130,9 @@ export default function SeoPage({ page }) {
                 )}
 
                 <div className="food-row-content">
-                  {subsection.heading && <h3>{subsection.heading}</h3>}
+                  {subsection.heading && (
+                    <h3>{subsection.heading}</h3>
+                  )}
 
                   {subsection.paragraphs?.map(
                     (paragraph, paragraphIndex) => (
