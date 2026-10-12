@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import {
   Routes,
@@ -43,8 +42,8 @@ function NotFound() {
 }
 
 export default function App() {
-  const foodPage = seoPages.find(
-    (page) => page.url === "/food/bangalore/"
+  const homeChefsPage = seoPages.find(
+    (page) => page.url === "/food/home-chefs/bangalore/"
   );
 
   return (
@@ -55,17 +54,19 @@ export default function App() {
 
       <main>
         <Routes>
+          {/* Homepage: Home Chefs in Bangalore */}
           <Route
             path="/"
             element={
-              foodPage ? (
-                <SeoPage page={foodPage} />
+              homeChefsPage ? (
+                <SeoPage page={homeChefsPage} />
               ) : (
                 <NotFound />
               )
             }
           />
 
+          {/* Keep all existing SEO page routes */}
           {seoPages.map((page) => (
             <Route
               key={page.url}
@@ -74,6 +75,7 @@ export default function App() {
             />
           ))}
 
+          {/* Handle unknown URLs */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
