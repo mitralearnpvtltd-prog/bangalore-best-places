@@ -1,1 +1,15 @@
-  { "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+<escape>{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/bus-food/bangalore/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}</escape>
