@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import SeoHead from "../components/SeoHead";
 import Journey from "../components/Journey";
@@ -10,11 +11,10 @@ export default function SeoPage({ page }) {
   const isBusFoodPage = page.category === "Bus Food";
   const h1Heading = page.h1 || page.name || page.title;
 
-  // Show the top CTA on the main Bangalore food page
-  // and the Home Chefs Bangalore page.
   const showTopCta =
     page.url === "/food/bangalore/" ||
-    page.url === "/food/home-chefs/bangalore/";
+    page.url === "/food/home-chefs/bangalore/" ||
+    page.url === "/bus-food/bangalore/";
 
   return (
     <>
@@ -98,7 +98,28 @@ export default function SeoPage({ page }) {
               </div>
             )}
 
+            {/* Single section text */}
             {section.text && <p>{section.text}</p>}
+
+            {/* Section items */}
+            {section.items?.map((item, itemIndex) => (
+              <div key={item.heading || itemIndex}>
+                {item.heading && <h3>{item.heading}</h3>}
+                {item.text && <p>{item.text}</p>}
+
+                {item.paragraphs?.map((paragraph, paragraphIndex) => (
+                  <p key={paragraphIndex}>{paragraph}</p>
+                ))}
+
+                {item.bullets?.length > 0 && (
+                  <ul className="features">
+                    {item.bullets.map((bullet, bulletIndex) => (
+                      <li key={bulletIndex}>{bullet}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
 
             {/* Subsections with optional images */}
             {section.subsections?.map((subsection, subsectionIndex) => (
@@ -141,6 +162,14 @@ export default function SeoPage({ page }) {
                   )}
 
                   {subsection.text && <p>{subsection.text}</p>}
+
+                  {subsection.bullets?.length > 0 && (
+                    <ul className="features">
+                      {subsection.bullets.map((bullet, bulletIndex) => (
+                        <li key={bulletIndex}>{bullet}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
             ))}
@@ -293,15 +322,15 @@ export default function SeoPage({ page }) {
           <h2>{page.cta.heading}</h2>
           <p>{page.cta.text}</p>
 
-          {page.cta.url ? (
-            <Link className="cta-button" to={page.cta.url}>
-              {page.cta.buttonText}
-            </Link>
-          ) : (
-            <button className="cta-button" type="button">
-              {page.cta.buttonText}
-            </button>
-          )}
+          <Link
+            className="cta-button"
+            to={
+              page.cta.url ||
+              "/food/homemade-food/bangalore/"
+            }
+          >
+            {page.cta.buttonText || "Explore Homemade Food"}
+          </Link>
         </section>
       )}
     </>

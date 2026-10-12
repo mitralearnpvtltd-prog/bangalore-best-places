@@ -30,6 +30,7 @@ a:hover {
 button {
   font-family: inherit;
 }
+
 /* =========================
    HEADER
 ========================= */
@@ -62,6 +63,7 @@ header.header {
   outline-offset: 4px;
   border-radius: 2px;
 }
+
 /* =========================
    BREADCRUMB
 ========================= */
@@ -78,7 +80,6 @@ header.header {
 .breadcrumb a {
   color: #1769aa;
 }
-
 
 /* =========================
    HERO
@@ -114,7 +115,6 @@ header.header {
   line-height: 1.7;
   color: #444;
 }
-
 
 /* =========================
    CONTENT
@@ -167,7 +167,6 @@ header.header {
   color: #444;
 }
 
-
 /* =========================
    SEO SECTIONS
 ========================= */
@@ -180,7 +179,6 @@ header.header {
 .seo-section:first-child h2 {
   margin-top: 10px;
 }
-
 
 /* =========================
    SEO ITEMS / CARDS
@@ -206,7 +204,6 @@ header.header {
   margin-top: 0;
 }
 
-
 /* =========================
    BULLET LISTS
 ========================= */
@@ -221,7 +218,6 @@ header.header {
   font-size: 16px;
   line-height: 1.6;
 }
-
 
 /* =========================
    TABLES
@@ -268,7 +264,6 @@ header.header {
   background: #f7f7f7;
 }
 
-
 /* =========================
    RELATED LINKS
 ========================= */
@@ -286,7 +281,6 @@ header.header {
 .related a {
   color: #1769aa;
 }
-
 
 /* =========================
    FAQ
@@ -314,14 +308,13 @@ header.header {
   margin: 0;
 }
 
-
 /* =========================
    CALL TO ACTION
 ========================= */
 
 .cta-section {
   width: 70%;
-  margin: 20px 25% 50px 5%;
+  margin: 24px 25% 50px 5%;
   padding: 35px 30px 45px;
   text-align: center;
   background: #faf7ef;
@@ -345,33 +338,161 @@ header.header {
 .cta-button {
   display: inline-block;
   margin-top: 10px;
-  padding: 12px 24px;
+  padding: 12px 22px;
   border: none;
   border-radius: 6px;
-  background: #e9a825;
-  color: #111;
-  font-weight: 700;
+  background: #e85d04;
+  color: #fff;
+  font-weight: 600;
   text-decoration: none;
   cursor: pointer;
 }
 
 .cta-button:hover {
-  background: #d99616;
+  background: #c94c00;
   text-decoration: none;
 }
 
+/* =========================
+   FOOD IMAGES
+========================= */
+
+.seo-food-image {
+  display: block;
+  width: 42%;
+  max-width: 440px;
+  height: 260px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 12px 0;
+}
+
+.food-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 28px 0;
+}
+
+.food-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.food-row-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.food-row-content h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.food-row-content p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* =========================
+   HOMEPAGE STYLES
+========================= */
+
+.hero-inner .btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 24px;
+  background: #e85d04;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.hero-inner .btn:hover {
+  background: #c94c00;
+}
+
+.group {
+  margin-bottom: 32px;
+}
+
+.group h2 {
+  margin-top: 28px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e9a825;
+}
+
+.group .related {
+  padding: 20px;
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.group .related li {
+  margin-bottom: 12px;
+}
+
+.top-cta {
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.top-cta-button {
+  display: inline-block;
+  padding: 14px 26px;
+  background-color: #e85d04;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.top-cta-button:hover {
+  background-color: #c94c00;
+}
 
 /* =========================
    JOURNEY
 ========================= */
 
 .journey {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   width: 70%;
-  margin-left: 5%;
-  margin-right: 25%;
-  padding: 20px 0 30px;
+  margin: 20px 25% 20px 5%;
+  padding: 20px 0;
+  list-style: none;
 }
 
+.journey li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.journey li + li {
+  border-left: 2px dotted #c7c7c7;
+  padding-left: 20px;
+}
+
+.journey-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e8f5e9;
+  color: #247a3c;
+  font-weight: 700;
+}
 
 /* =========================
    FOOTER
@@ -450,13 +571,11 @@ header.header {
   font-size: 14px;
 }
 
-
 /* =========================
    TABLET
 ========================= */
 
 @media (max-width: 768px) {
-  /* Header */
   header.header {
     align-items: flex-start;
     flex-direction: column;
@@ -470,18 +589,15 @@ header.header {
     gap: 12px 20px;
   }
 
-  /* Main content widths */
   .breadcrumb,
   .hero-inner,
   .content,
-  .cta-section,
-  .journey {
+  .cta-section {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
   }
 
-  /* Hero */
   .hero h1 {
     font-size: 32px;
   }
@@ -490,7 +606,6 @@ header.header {
     font-size: 16px;
   }
 
-  /* Content */
   .content h2 {
     font-size: 26px;
   }
@@ -499,12 +614,10 @@ header.header {
     font-size: 16px;
   }
 
-  /* Cards */
   .seo-items {
     grid-template-columns: 1fr;
   }
 
-  /* Tables */
   .seo-table {
     min-width: 600px;
   }
@@ -514,20 +627,35 @@ header.header {
     padding: 12px;
   }
 
-  /* Footer */
   .site-footer .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 25px;
   }
-}
 
+  .journey {
+    width: 90%;
+    margin: 20px 5%;
+    gap: 8px;
+  }
+
+  .journey li {
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .journey li + li {
+    padding-left: 8px;
+  }
+}
 
 /* =========================
    SMALL MOBILE
 ========================= */
 
 @media (max-width: 480px) {
-  /* Header */
   .header .logo {
     font-size: 22px;
   }
@@ -540,7 +668,6 @@ header.header {
     font-size: 14px;
   }
 
-  /* Hero and content */
   .hero h1 {
     font-size: 28px;
   }
@@ -553,7 +680,6 @@ header.header {
     font-size: 23px;
   }
 
-  /* Tables */
   .seo-table {
     font-size: 14px;
   }
@@ -563,7 +689,6 @@ header.header {
     padding: 10px;
   }
 
-  /* Footer */
   .site-footer {
     padding: 35px 5% 20px;
   }
@@ -574,69 +699,9 @@ header.header {
   }
 }
 
-.cta-section {
-  margin: 24px 0;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 12px 22px;
-  background-color: #e85d04;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-}
-
-.cta-button:hover {
-  background-color: #c94c00;
-}
-
-.seo-food-image {
-  display: block;
-  width: 100%;
-  max-width: 400px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 12px 0;
-}
-
-.food-row {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin: 28px 0;
-}
-
-.food-row-reverse {
-  flex-direction: row-reverse;
-}
-
-.seo-food-image {
-  display: block;
-  width: 42%;
-  max-width: 440px;
-  height: 260px;
-  flex-shrink: 0;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.food-row-content {
-  flex: 1;
-  min-width: 0;
-}
-
-.food-row-content h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-.food-row-content p {
-  margin: 0;
-  line-height: 1.7;
-}
+/* =========================
+   FOOD ROW MOBILE
+========================= */
 
 @media (max-width: 600px) {
   .food-row,
@@ -652,64 +717,52 @@ header.header {
     height: 220px;
   }
 }
+/* =========================
+   HEADER NAVIGATION FIX
+========================= */
 
-/* HOMEPAGE STYLES */
+header.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+header.header .nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+header.header .nav a {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  header.header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  header.header .nav {
+    width: 100%;
+    gap: 12px 20px;
+  }
+}
+/* Reduce space between the Order Food button and journey steps */
+
+.hero-inner {
+  padding-bottom: 0;
+}
 
 .hero-inner .btn {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 12px 24px;
-  background: #e85d04;
-  color: #fff;
-  font-weight: 700;
-  border-radius: 6px;
-  text-decoration: none;
+  margin-bottom: 0;
 }
 
-.hero-inner .btn:hover {
-  background: #c94c00;
+.journey {
+  margin-top: 0;
+  padding-top: 12px;
 }
-
-.group {
-  margin-bottom: 32px;
-}
-
-.group h2 {
-  margin-top: 28px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #e9a825;
-}
-
-.group .related {
-  padding: 20px;
-  background: #fafafa;
-  border: 1px solid #e5e5e5;
-  border-radius: 8px;
-}
-
-.group .related li {
-  margin-bottom: 12px;
-}
-
-.top-cta {
-  margin-top: 24px;
-  margin-bottom: 32px;
-}
-
-.top-cta-button {
-  display: inline-block;
-  padding: 14px 26px;
-  background-color: #e85d04;
-  color: #ffffff;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 6px;
-  text-align: center;
-}
-
-.top-cta-button:hover {
-  background-color: #c94c00;
-}
-
-
-

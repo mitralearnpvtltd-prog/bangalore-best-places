@@ -808,22 +808,209 @@ text: "Bangalore offers a wide variety of food choices, from traditional Karnata
       "Plan your journey, pick a stop and pre-order a fresh meal so it is ready when your bus arrives.",
     paragraph:
       "Bus food delivery makes it easier to enjoy a fresh meal while travelling by bus. Long journeys can make finding suitable food difficult, especially when passengers have limited time at stops or do not know where to eat along the route. With bus food delivery, travellers can plan their meals before the journey and select a suitable stop for collection. Fresh meals and snacks can be ordered in advance so that the food is ready when the bus reaches the selected location. This can be useful for passengers travelling during lunch or dinner hours, families travelling together and anyone taking a long-distance bus journey. Instead of depending only on roadside food or carrying a meal from home, passengers can plan a convenient food option as part of their journey. Bus food delivery connects travel with local food choices and helps passengers enjoy freshly prepared meals during their trip. It is a practical way to make bus journeys more comfortable and convenient.",
-  },
+  },  
+{
+  category: "Bus Food",
+  subcategory: "Passenger Meals",
+  name: "Food on Bus",
+  h1: "Food Options for Bus Journeys from Bangalore",
+  title: "Food Delivery on Bus in Bangalore | TravelBites",
+  description:
+    "Explore food options for bus journeys from Bangalore. Plan homemade meals, snacks and convenient food stops before you travel.",
 
-  {
-    category: "Bus Food",
-    subcategory: "Passenger Meals",
-    name: "Food on Bus",
-    title: "Food Delivery on Bus in Bangalore",
-    description:
-      "Order fresh food while travelling by bus and get your meal delivered at your boarding or selected stops.",
-    url: "/bus-food/bangalore/",
-    intro:
-      "Travelling from Bangalore? Order food for your boarding point or any stop along the way.",
-    paragraph:
-      "Food delivery on bus in Bangalore helps passengers plan fresh meals for their bus journeys without having to search for food while travelling. A passenger can select a suitable boarding point or stop and arrange food in advance so the meal is ready during the journey. This is especially useful for longer routes where passengers may travel through several stops and have limited time to find reliable food. Homemade meals, snacks and regional dishes can provide convenient options for lunch, dinner or other times during a trip. Travellers can plan their food along with their bus journey instead of waiting until they reach a restaurant or roadside stop. Families, students, working professionals and frequent bus travellers can all benefit from having a meal planned before departure. For people starting their journey from Bangalore, bus food delivery provides a simple connection between travel and freshly prepared local food, making it easier to enjoy a convenient meal while continuing towards the destination.",
-  },
+  primaryKeyword: "food delivery on bus in Bangalore",
+  secondaryKeywords: [
+    "food on bus in Bangalore",
+    "bus food delivery Bangalore",
+    "food for bus travellers",
+    "order food for bus journey",
+    "food delivery at bus stops",
+    "homemade food in Bangalore",
+    "food options for long bus journeys"
+  ],
 
+  url: "/bus-food/bangalore/",
+
+  intro:
+    "Travelling by bus from Bangalore? Planning food before departure can make your journey more convenient. Explore homemade meals, snacks and regional food options, and check availability and collection arrangements before you travel. Whether you are heading out on a short trip or a longer route, consider your departure time, journey duration and planned breaks when choosing what to eat.",
+
+  sections: [
+    {
+      heading: "Why Plan Food for Your Bus Journey?",
+      paragraphs: [
+        "Planning meals before travelling by bus can help you make better use of your time, particularly on longer journeys. Knowing what you intend to eat can reduce the need to search for food at the last minute and help you prepare for scheduled breaks.",
+        "Travellers departing from Bangalore can consider homemade meals, suitable snacks and regional food options based on their route and schedule. Always check the provider's availability, pickup arrangements and timing before relying on a food option."
+      ]
+    },
+    {
+      heading: "What Food Can You Choose for a Bus Journey?",
+      paragraphs: [
+        "Food choices depend on your preferences, journey duration and access to food before departure or during a break. Consider options that are practical for your travel schedule."
+      ],
+            subsections: [
+        {
+          heading: "South Indian Food",
+          paragraphs: [
+            "Idli, dosa and other South Indian dishes may be options to explore before departure, depending on availability and how easily they can be carried."
+          ],
+          image: {
+            src: "/images/south-indian-food-bus-travel.jpg",
+            alt: "South Indian breakfast meal for bus travellers"
+          }
+        },
+        {
+          heading: "North Indian Food",
+          paragraphs: [
+            "Rice meals, roti-based dishes and other familiar North Indian options can suit travellers looking for a more filling meal. Check packaging and collection details with the food provider."
+          ],
+          image: {
+            src: "/images/north-indian-meal-travel.jpeg",
+            alt: "Homemade roti and curry meal packed for travel"
+          }
+        },
+        {
+          heading: "Biryani and Rice Meals",
+          paragraphs: [
+            "Biryani and other rice-based meals may be convenient choices for lunch or dinner when available. Confirm the serving size, pickup time and storage requirements before ordering."
+          ],
+          image: {
+            src: "/images/biryani-rice-meal-travel.jpg",
+            alt: "Biryani meal option for bus journeys"
+          }
+        },
+        {
+          heading: "Snacks and Light Meals",
+          paragraphs: [
+            "Light snacks can be useful for shorter journeys or between meals. Choose options that are easy to carry and suitable for the length of your trip."
+          ],
+          image: {
+            src: "/images/Snacks-for-Bus-Travel.jpg",
+            alt: "Portable snacks for a bus journey"
+          }
+        }
+      ]
+    },
+    {
+      heading: "Food Options for Different Travel Occasions",
+      paragraphs: [
+        "Your food plans may change depending on when you travel and how long you will be on the road. For a morning departure, consider arranging breakfast before boarding. For journeys around lunchtime or dinner, plan a more filling meal and check when you will have time to eat.",
+        "Families, students, working professionals and groups may have different preferences and schedules. Check food availability, dietary requirements and collection arrangements before finalising your plans."
+      ]
+    },
+    {
+      heading: "Food for Bus Travellers from Bangalore",
+      paragraphs: [
+        "Bangalore is a starting point for journeys to many destinations across Karnataka and beyond. Before leaving, consider the expected journey duration, boarding point and any planned stops. These details can help you decide whether to eat before departure, carry suitable snacks or arrange food during a break.",
+        "Do not assume that every bus stop or operator supports food delivery or collection. Confirm the exact location, provider availability and timing before placing an order."
+      ]
+    },
+    {
+      heading: "How to Plan Your Food Before Departure",
+      subsections: [
+        {
+          heading: "Choose Your Food",
+          paragraphs: [
+            "Decide whether you need a full meal, breakfast or light snacks based on your travel schedule and preferences."
+          ]
+        },
+        {
+          heading: "Confirm the Collection Location",
+          paragraphs: [
+            "Check the exact pickup point and make sure it is accessible from your boarding location or planned break."
+          ]
+        },
+        {
+          heading: "Check the Timing",
+          paragraphs: [
+            "Confirm the expected preparation and collection time, leaving enough time to board your bus without rushing."
+          ]
+        },
+        {
+          heading: "Verify Availability Before Ordering",
+          paragraphs: [
+            "Ask the provider whether your selected food and collection arrangements are available for your date, location and travel schedule."
+          ]
+        }
+      ]
+    },
+    {
+      heading: "Why Choose TravelBites?",
+      paragraphs: [
+        "TravelBites helps travellers explore food-related options alongside their travel plans. You can browse relevant food pages, learn about homemade food options and review information before deciding what suits your journey.",
+        "Before placing an order, confirm the food provider's current menu, price, availability and collection arrangements. Specific services may vary by location and provider."
+      ]
+    },
+    {
+      heading: "Popular Food Options to Explore in Bangalore",
+      paragraphs: [
+        "Travellers starting in Bangalore can explore a variety of local and familiar meal options, including South Indian dishes, rice meals, biryani, roti-based meals and snacks. The best choice depends on your preferences, departure time and how you plan to eat during the journey.",
+        "Explore our related pages for more information about homemade food and food delivery in Bangalore. Availability and ordering arrangements should be confirmed with the relevant provider."
+      ]
+    },
+    {
+      heading: "Frequently Asked Questions",
+      faqs: [
+        {
+          question: "Can I arrange food before a bus journey from Bangalore?",
+          answer:
+            "You can explore food options and plan meals before departure. Availability and collection arrangements depend on the food provider and location."
+        },
+        {
+          question: "What food is suitable for a long bus journey?",
+          answer:
+            "Choose meals or snacks that fit your travel schedule and are practical to carry or collect. Consider packaging and any storage requirements."
+        },
+        {
+          question: "Can food be delivered directly to my bus?",
+          answer:
+            "Direct delivery depends on the provider, location and bus-stop arrangements. Confirm that the service supports your boarding point before ordering."
+        },
+        {
+          question: "Can I collect food at my boarding point?",
+          answer:
+            "Collection depends on the provider's available pickup locations. Confirm the exact location and collection time before placing an order."
+        },
+        {
+          question: "Can I order homemade food for my journey?",
+          answer:
+            "You can explore homemade food options, but menu availability and pickup or delivery arrangements must be confirmed with the provider."
+        },
+        {
+          question: "When should I arrange food for my bus trip?",
+          answer:
+            "Plan ahead and confirm the provider's ordering requirements, preparation time and collection arrangements before your departure."
+        }
+      ]
+    }
+  ],
+
+  relatedLinks: [
+    {
+      label: "Explore Homemade Food in Bangalore",
+      url: "/food/homemade-food/bangalore/"
+    },
+    {
+      label: "Explore Food Delivery in Bangalore",
+      url: "/food/bangalore/"
+    },
+    {
+      label: "Explore Home Chefs in Bangalore",
+      url: "/food/home-chefs/bangalore/"
+    },
+    {
+      label: "Explore Bus Food Delivery",
+      url: "/bus-food/"
+    }
+  ],
+
+  cta: {
+    heading: "Plan Your Food Before You Travel",
+    text:
+      "Explore food options and confirm availability and collection details before your next bus journey.",
+    url: "/food/homemade-food/bangalore/",
+    buttonText: "Explore Homemade Food"
+  }
+},
   {
     category: "Bus Food",
     subcategory: "KSRTC",
