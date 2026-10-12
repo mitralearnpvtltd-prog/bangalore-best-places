@@ -784,40 +784,6 @@ text: "Bangalore offers a wide variety of food choices, from traditional Karnata
       url: "/bus-food/bangalore/",
     },
   ],
-
-  faqs: [
-    {
-      question: "What does a home chef prepare?",
-      answer:
-        "A home chef may prepare everyday meals, regional dishes or speciality foods depending on their menu.",
-    },
-    {
-      question: "Can I check a home chef's menu before ordering?",
-      answer:
-        "Review the available chef profile and menu. Check dish details, prices and availability before placing an order.",
-    },
-    {
-      question: "Can I request vegetarian food?",
-      answer:
-        "Check whether vegetarian options are listed and confirm any specific dietary requirements with the provider.",
-    },
-    {
-      question: "How do I know if delivery is available in my area?",
-      answer:
-        "Check the provider's delivery information and confirm that your location is covered before ordering.",
-    },
-    {
-      question: "What should I check before placing an order?",
-      answer:
-        "Review the menu, ingredients, portion sizes, prices, availability and delivery instructions.",
-    },
-    {
-      question: "Can I order home-chef food for my family?",
-      answer:
-        "You can explore the available serving sizes and ask the provider whether suitable quantities are offered.",
-    },
-  ],
-
   internalLinksHeading: "Explore More Food Options",
   cta: {
     heading: "Explore Home Chefs in Bangalore",
