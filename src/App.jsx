@@ -42,8 +42,9 @@ function NotFound() {
 }
 
 export default function App() {
-  const homeChefsPage = seoPages.find(
-    (page) => page.url === "/food/home-chefs/bangalore/"
+  // Homepage: Bus Food Bangalore
+  const busFoodPage = seoPages.find(
+    (page) => page.url === "/bus-food/bangalore/"
   );
 
   return (
@@ -54,19 +55,19 @@ export default function App() {
 
       <main>
         <Routes>
-          {/* Homepage: Home Chefs in Bangalore */}
+          {/* Homepage: Bus Food Bangalore */}
           <Route
             path="/"
             element={
-              homeChefsPage ? (
-                <SeoPage page={homeChefsPage} />
+              busFoodPage ? (
+                <SeoPage page={busFoodPage} />
               ) : (
                 <NotFound />
               )
             }
           />
 
-          {/* Keep all existing SEO page routes */}
+          {/* All existing SEO page routes */}
           {seoPages.map((page) => (
             <Route
               key={page.url}
