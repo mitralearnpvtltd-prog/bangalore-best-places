@@ -5,6 +5,7 @@ import {
   Route,
   useLocation,
   Link,
+  Navigate,
 } from "react-router-dom";
 
 import Header from "./components/Header.jsx";
@@ -36,16 +37,17 @@ function NotFound() {
 
       <p className="intro">
         That page does not exist.{" "}
-        <Link to="/">Go to the home page</Link>.
+        <Link to="/bus/bangalore/">
+          Go to Bangalore Bus Tickets
+        </Link>.
       </p>
     </section>
   );
 }
 
 export default function App() {
-  // Homepage: Bus Food Delivery
-  const homePage = seoPages.find(
-    (page) => page.url === "/bus-food/"
+  const bangaloreBusPage = seoPages.find(
+    (page) => page.url === "/bus/bangalore/"
   );
 
   return (
@@ -56,12 +58,15 @@ export default function App() {
 
       <main>
         <Routes>
-          {/* Homepage: Bus Food Delivery */}
+          {/* Redirect the homepage to Bangalore Bus Tickets */}
           <Route
             path="/"
             element={
-              homePage ? (
-                <SeoPage page={homePage} />
+              bangaloreBusPage ? (
+                <Navigate
+                  to="/bus/bangalore/"
+                  replace
+                />
               ) : (
                 <NotFound />
               )
@@ -80,7 +85,10 @@ export default function App() {
             ))}
 
           {/* Handle unknown URLs */}
-          <Route path="*" element={<NotFound />} />
+          <Route
+            path="*"
+            element={<NotFound />}
+          />
         </Routes>
       </main>
 

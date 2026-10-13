@@ -1477,33 +1477,260 @@ text: "Bangalore offers a wide variety of food choices, from traditional Karnata
   },
 },
 
-  {
-    category: "Bus",
-    subcategory: "Tickets",
-    name: "Bangalore Bus Tickets",
-    title: "Bangalore Bus Tickets – Book Bus Tickets Online",
-    description:
-      "Search and book bus tickets from Bangalore to popular destinations across Karnataka and India.",
-    url: "/bus/bangalore/",
-    intro:
-      "Search buses from Bangalore to popular destinations and add a fresh meal to your trip in the same booking.",
-    paragraph:
-      "Bangalore is a major starting point for bus journeys to cities and towns across Karnataka and other parts of India. Travellers looking for Bangalore bus tickets can search for routes, compare available services and plan their journey according to their destination and preferred timings. Popular routes connect Bangalore with destinations such as Mysore, Chennai, Hyderabad, Mangalore and Goa. Choosing the right bus involves considering departure time, travel duration, boarding point and arrival location. Planning these details in advance can make the journey easier, especially for passengers travelling long distances or during busy travel periods. Along with booking a bus ticket, travellers can also plan meals for their journey and arrange food at suitable stops. This is useful for passengers who expect to travel during lunch or dinner hours. Whether you are travelling for work, education, family visits or leisure, searching and booking Bangalore bus tickets in advance helps you organise your journey and prepare for a comfortable trip.",
-  },
+{
+  category: "Bus",
+  subcategory: "Tickets",
+  name: "Bangalore Bus Tickets",
+  h1: "Book Bus Tickets from Bangalore Online",
+  title: "Bangalore Bus Booking | Routes, Fares & Travel Tips",
+  description:
+    "Search Bangalore bus tickets, compare popular routes, check boarding points and plan your journey from Bangalore.",
 
-  {
-    category: "Bus",
-    subcategory: "Booking",
-    name: "Bangalore Bus Booking",
-    title: "Bangalore Bus Booking Online",
-    description:
-      "Compare bus routes and book your next bus journey from Bangalore.",
+  url: "/bus/bangalore/",
+
+  primaryKeyword: "Bangalore bus tickets",
+
+  secondaryKeywords: [
+    "bus tickets Bangalore",
+    "Bangalore bus booking",
+    "book bus tickets online Bangalore",
+    "Bangalore to Mysore bus",
+    "Bangalore to Chennai bus",
+    "Bangalore to Hyderabad bus",
+    "Bangalore to Mangalore bus",
+    "Bangalore to Goa bus",
+  ],
+
+  images: [
+    {
+      src: "/images/bangalore-bus-tickets.webp",
+      alt: "Intercity bus travelling on a highway from Bangalore",
+      placement: "hero",
+      caption: "Explore intercity bus travel from Bangalore.",
+    },
+    {
+      src: "/images/bangalore-bus-station.jpg",
+      alt: "Intercity buses at a bus station in Bangalore",
+      placement: "content",
+      afterSection: "Popular Bus Routes from Bangalore",
+      caption:
+        "Check your bus departure point and boarding time before travelling.",
+    },
+    {
+      src: "/images/bangalore-bus-interior.jpeg",
+      alt: "Passenger seating inside an intercity bus",
+      placement: "content",
+      afterSection: "Food and Meals During Your Bus Journey",
+      caption:
+        "Review the seating and facilities available for your journey.",
+    },
+  ],
+
+  intro: [
+    "Looking for Bangalore bus tickets? Explore popular destinations, compare journey details and plan your trip from Bangalore to cities across Karnataka and other parts of India.",
+
+    "Before choosing a bus, review departure times, boarding points, arrival locations and estimated journey durations. These details can help you select a service that suits your schedule.",
+
+    "For longer journeys, consider your meal times and check whether food is available on board or at scheduled stops. Confirm current travel information with the relevant bus operator before departure.",
+  ],
+
+  paragraph:
+    "Bangalore is a major starting point for bus journeys to destinations across Karnataka and other parts of India. Travellers searching for Bangalore bus tickets can compare available services and review departure timings, boarding points, arrival locations and ticket conditions. Popular destinations include Mysore, Chennai, Hyderabad, Mangalore and Goa. The right service depends on your destination, preferred departure time, budget and travel requirements. Booking in advance may be helpful during busy travel periods, although availability depends on the operator. For longer journeys, plan meals around your travel schedule and check whether food is available on board or at scheduled stops. Reviewing your route and travel details before departure can help you organise your trip.",
+
+  sections: [
+    {
+      heading: "Why Book Bangalore Bus Tickets Online?",
+      paragraphs: [
+        "Online bus booking allows travellers to explore available services and review journey details before choosing a ticket. Comparing departure times, boarding points and arrival locations can help you find an option that suits your plans.",
+
+        "Review the operator's ticket conditions, cancellation policy and other booking information before confirming your journey.",
+      ],
+    },
+
+    {
+      heading: "Popular Bus Routes from Bangalore",
+      paragraphs: [
+        "Bangalore connects with cities and towns through intercity bus services. The routes below are examples of destinations to consider when planning a trip. Check current schedules and availability with the relevant operator before booking.",
+      ],
+
+      table: [
+        {
+          category: "Bangalore to Mysore",
+          details: "Travel between Bangalore and Mysore.",
+          whatToCheck:
+            "Departure time, boarding point and journey duration",
+        },
+        {
+          category: "Bangalore to Chennai",
+          details: "Plan an intercity trip to Chennai.",
+          whatToCheck:
+            "Operator schedule, arrival point and ticket conditions",
+        },
+        {
+          category: "Bangalore to Hyderabad",
+          details: "Consider services for a longer journey.",
+          whatToCheck:
+            "Travel duration, departure time and rest stops",
+        },
+        {
+          category: "Bangalore to Mangalore",
+          details: "Travel from Bangalore to coastal Karnataka.",
+          whatToCheck:
+            "Schedule, boarding location and arrival time",
+        },
+        {
+          category: "Bangalore to Goa",
+          details: "Explore bus travel options to Goa.",
+          whatToCheck:
+            "Journey duration, pickup point and luggage rules",
+        },
+      ],
+    },
+
+    {
+      heading: "How to Choose the Right Bus",
+      subsections: [
+        {
+          heading: "Compare Departure Times",
+          paragraphs: [
+            "Choose a departure time that suits your schedule. For overnight journeys, check the expected arrival time and the location where the bus will drop you.",
+          ],
+        },
+        {
+          heading: "Check Boarding and Drop-off Points",
+          paragraphs: [
+            "Confirm the boarding point before travelling and check the drop-off location at your destination. Allow enough time to reach the boarding point.",
+          ],
+        },
+        {
+          heading: "Review Ticket Conditions",
+          paragraphs: [
+            "Read the ticket details, cancellation terms, luggage rules and other conditions supplied by the bus operator before completing your booking.",
+          ],
+        },
+        {
+          heading: "Plan Your Travel Budget",
+          paragraphs: [
+            "Compare available ticket prices and consider additional travel expenses when choosing a service.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Food and Meals During Your Bus Journey",
+      paragraphs: [
+        "Planning meals can be useful when travelling from Bangalore, especially on longer routes. Depending on your schedule, you may want to eat before departure or check whether food is available at scheduled stops.",
+
+        "Food availability and delivery arrangements vary by route and provider. Confirm pickup instructions and timing before placing any food order.",
+      ],
+    },
+
+    {
+      heading: "Tips for a Comfortable Bus Journey",
+      bullets: [
+        "Confirm your ticket and boarding details before departure.",
+        "Arrive at the boarding point with enough time to spare.",
+        "Keep your booking information accessible during travel.",
+        "Check luggage restrictions and operator instructions.",
+        "Plan meals and breaks for longer journeys.",
+        "Check the latest schedule with your bus operator.",
+      ],
+    },
+
+    {
+      heading: "Frequently Asked Questions",
+      faqs: [
+        {
+          question: "How can I book Bangalore bus tickets?",
+          answer:
+            "Search for your destination, compare available services and review ticket details through a booking service or the bus operator.",
+        },
+        {
+          question: "Which destinations can I travel to from Bangalore?",
+          answer:
+            "Destinations may include Mysore, Chennai, Hyderabad, Mangalore and Goa. Available routes and schedules depend on the bus operator.",
+        },
+        {
+          question: "Should I book bus tickets in advance?",
+          answer:
+            "Booking in advance may help during busy travel periods. Availability and booking requirements vary by route and operator.",
+        },
+        {
+          question: "What should I check before booking a bus?",
+          answer:
+            "Review departure times, boarding and drop-off points, journey duration, ticket conditions and luggage rules.",
+        },
+        {
+          question: "Can I get food during a bus journey?",
+          answer:
+            "Food availability depends on the operator, route and scheduled stops. Check the relevant arrangements before travelling.",
+        },
+        {
+          question: "Can I change or cancel my bus ticket?",
+          answer:
+            "Changes and cancellations depend on the ticket conditions and the bus operator's policy. Review those terms before booking.",
+        },
+        {
+          question: "Where can I check the latest bus schedule?",
+          answer:
+            "Check the booking service or bus operator for current departure times, route information and availability.",
+        },
+      ],
+    },
+
+    {
+      heading: "Plan Your Next Journey from Bangalore",
+      paragraphs: [
+        "Compare route details, review ticket conditions and prepare your travel essentials before departure. Check current schedules and availability through the relevant bus operator or booking service.",
+      ],
+    },
+  ],
+
+  relatedLinks: [
+    {
+      label: "Bangalore Bus Booking",
+      url: "/bus/bangalore/booking/",
+    },
+    {
+      label: "Bangalore to Mysore",
+      url: "/bus/bangalore-to-mysore/",
+    },
+    {
+      label: "Bangalore to Chennai",
+      url: "/bus/bangalore-to-chennai/",
+    },
+    {
+      label: "Bangalore to Hyderabad",
+      url: "/bus/bangalore-to-hyderabad/",
+    },
+    {
+      label: "Bangalore to Mangalore",
+      url: "/bus/bangalore-to-mangalore/",
+    },
+    {
+      label: "Bangalore to Goa",
+      url: "/bus/bangalore-to-goa/",
+    },
+    {
+      label: "Bus Food Delivery",
+      url: "/bus-food/",
+    },
+    {
+      label: "Food Delivery in Bangalore",
+      url: "/food/bangalore/",
+    },
+  ],
+
+  cta: {
+    heading: "Ready to Plan Your Bangalore Bus Journey?",
+    text:
+      "Review your route, boarding point and ticket conditions before booking.",
+    buttonText: "Explore Bus Travel Options",
     url: "/bus/bangalore/booking/",
-    intro:
-      "Compare routes, timings and stops, then book your next journey from Bangalore in a few steps.",
-    paragraph:
-      "Bangalore bus booking allows travellers to plan journeys from the city to popular destinations by comparing routes, timings and available travel options. With many bus services operating from Bangalore, passengers can choose a journey that fits their preferred departure time and destination. Important details to consider include the boarding point, route, travel duration, arrival location and available stops. Booking in advance can be particularly useful for long-distance journeys and busy travel periods when preferred services may fill quickly. Travellers can also plan food along with their bus booking, especially when the journey covers several hours. Pre-ordering a meal for a suitable stop can make the trip more convenient and reduce the need to search for food during a short break. Whether you are travelling for business, visiting family, studying or planning a holiday, Bangalore bus booking provides a practical way to organise your journey. Comparing travel options before departure helps passengers choose a suitable route and prepare for a smoother bus trip.",
   },
+},
+
 
   {
     category: "Bus Route",

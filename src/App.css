@@ -758,3 +758,44 @@ header.header .nav a {
     height: 230px;
   }
 }
+
+/* Bus page image gallery */
+.seo-image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin: 24px 0;
+}
+
+.seo-image-card {
+  min-width: 0;
+  margin: 0;
+}
+
+.seo-image-card img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.seo-image-card figcaption {
+  margin-top: 10px;
+  line-height: 1.5;
+  color: #444;
+  font-size: 14px;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  .seo-image-gallery {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .seo-image-card img {
+    height: 220px;
+  }
+}
