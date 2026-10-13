@@ -11,22 +11,27 @@ export default function SeoPage({ page }) {
   const isBusFoodPage = page.category === "Bus Food";
   const h1Heading = page.h1 || page.name || page.title;
 
-  // Top CTA appears on the specified landing pages.
-  // Include both Bus Food pages.
-  const showTopCta =
-    page.url === "/food/bangalore/" ||
-    page.url === "/food/home-chefs/bangalore/" ||
-    page.url === "/bus-food/" ||
-    page.url === "/bus-food/bangalore/";
+  // Show the top CTA on selected landing pages.
+  const showTopCta = [
+    "/food/bangalore/",
+    "/food/home-chefs/bangalore/",
+    "/bus-food/",
+    "/bus-food/bangalore/",
+    "/bus-food/ksrtc/",
+  ].includes(page.url);
 
-  // Choose CTA destination and label by page category.
+  // Default CTA destination.
   const defaultCtaUrl = isBusFoodPage
     ? "/bus-food/bangalore/"
     : "/food/homemade-food/bangalore/";
 
-  const defaultCtaText = isBusFoodPage
-    ? "Explore Bus Food Bangalore"
-    : "Order Food";
+  // CTA labels.
+  const defaultCtaText =
+    page.url === "/bus-food/ksrtc/"
+      ? "Explore Bus Food Delivery"
+      : isBusFoodPage
+        ? "Explore Bus Food Bangalore"
+        : "Order Food";
 
   return (
     <>
@@ -57,6 +62,7 @@ export default function SeoPage({ page }) {
         <div className="hero-inner">
           <h1>{h1Heading}</h1>
 
+          {/* Intro paragraphs */}
           {page.intro && (
             <div className="seo-intro">
               {Array.isArray(page.intro) ? (
@@ -105,17 +111,13 @@ export default function SeoPage({ page }) {
             {section.cta && (
               <div className="cta-section">
                 <p>{section.cta}</p>
-
-                <Link
-                  className="cta-button"
-                  to={defaultCtaUrl}
-                >
+                <Link className="cta-button" to={defaultCtaUrl}>
                   {section.cta}
                 </Link>
               </div>
             )}
 
-            {/* Single section text */}
+            {/* Section text */}
             {section.text && <p>{section.text}</p>}
 
             {/* Section items */}
@@ -209,44 +211,65 @@ export default function SeoPage({ page }) {
               </ul>
             )}
 
-            {/* Tables */}
+            {/* Tables: supports two-column and three-column formats */}
             {section.table?.length > 0 && (
               <div className="seo-table-wrapper">
-                <table className="seo-table">
-                  <thead>
-                    <tr>
-                      {section.table[0]?.category !== undefined ? (
-                        <>
-                          <th>Food Category</th>
-                          <th>Examples</th>
-                        </>
-                      ) : (
-                        <>
-                          <th>Food</th>
-                          <th>Best For</th>
-                        </>
-                      )}
-                    </tr>
-                  </thead>
+                {(() => {
+                  const firstRow = section.table[0];
 
-                  <tbody>
-                    {section.table.map((row, rowIndex) => (
-                      <tr key={rowIndex}>
-                        {row.category !== undefined ? (
-                          <>
-                            <td>{row.category}</td>
-                            <td>{row.examples}</td>
-                          </>
-                        ) : (
-                          <>
-                            <td>{row.food}</td>
-                            <td>{row.bestFor}</td>
-                          </>
-                        )}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                  const isCategoryTable =
+                    firstRow.category !== undefined;
+
+                  const hasWhatToCheck = section.table.some(
+                    (row) => row.whatToCheck !== undefined
+                  );
+
+                  return (
+                    <table className="seo-table">
+                      <thead>
+                        <tr>
+                          {isCategoryTable ? (
+                            <>
+                              <th scope="col">Food Category</th>
+                              <th scope="col">Examples</th>
+                            </>
+                          ) : (
+                            <>
+                              <th scope="col">Food</th>
+                              <th scope="col">Best For</th>
+                            </>
+                          )}
+
+                          {hasWhatToCheck && (
+                            <th scope="col">What to Check</th>
+                          )}
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        {section.table.map((row, rowIndex) => (
+                          <tr key={rowIndex}>
+                            {isCategoryTable ? (
+                              <>
+                                <td>{row.category}</td>
+                                <td>{row.examples}</td>
+                              </>
+                            ) : (
+                              <>
+                                <td>{row.food}</td>
+                                <td>{row.bestFor}</td>
+                              </>
+                            )}
+
+                            {hasWhatToCheck && (
+                              <td>{row.whatToCheck || "—"}</td>
+                            )}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  );
+                })()}
               </div>
             )}
 

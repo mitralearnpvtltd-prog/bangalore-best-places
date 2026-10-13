@@ -41,7 +41,8 @@ header.header {
   padding: 18px 5%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+  gap: 32px;
   border-bottom: 1px solid #e5e5e5;
   background: #fff;
 }
@@ -62,6 +63,18 @@ header.header {
   outline: 2px solid #1769aa;
   outline-offset: 4px;
   border-radius: 2px;
+}
+
+header.header .nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+header.header .nav a {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 /* =========================
@@ -94,7 +107,7 @@ header.header {
   width: 70%;
   margin-left: 5%;
   margin-right: 25%;
-  padding: 10px 0 30px;
+  padding: 10px 0 0;
 }
 
 .hero h1 {
@@ -227,6 +240,7 @@ header.header {
   width: 100%;
   margin: 24px 0 32px;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .seo-table {
@@ -353,45 +367,124 @@ header.header {
   text-decoration: none;
 }
 
+.top-cta {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.top-cta-button {
+  display: inline-block;
+  padding: 14px 26px;
+  background-color: #e85d04;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.top-cta-button:hover {
+  background-color: #c94c00;
+}
+
 /* =========================
-   FOOD IMAGES
+   FOOD IMAGE AND TEXT ROWS
 ========================= */
 
-.seo-food-image {
-  display: block;
-  width: 42%;
-  max-width: 440px;
-  height: 260px;
-  flex-shrink: 0;
-  object-fit: cover;
-  border-radius: 12px;
-  margin: 12px 0;
-}
-
 .food-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
-  gap: 24px;
-  margin: 28px 0;
+  gap: 28px;
+  width: 100%;
+  margin: 32px 0;
 }
 
-.food-row-reverse {
-  flex-direction: row-reverse;
+.food-row-reverse .seo-food-image {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.food-row-reverse .food-row-content {
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .food-row-content {
-  flex: 1;
   min-width: 0;
 }
 
 .food-row-content h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
+  font-size: 22px;
 }
 
 .food-row-content p {
+  margin: 0 0 12px;
+  line-height: 1.75;
+}
+
+.seo-food-image {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 280px;
   margin: 0;
-  line-height: 1.7;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  background: #f5f5f5;
+}
+
+/* Text-only subsections */
+.food-row-text-only {
+  display: block;
+  margin: 28px 0;
+}
+
+/* =========================
+   SECTION IMAGE GALLERY
+========================= */
+
+.seo-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+  width: 100%;
+  margin: 24px 0 32px;
+}
+
+.seo-images figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.seo-gallery-image {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  background: #f5f5f5;
+}
+
+.seo-images figcaption {
+  margin-top: 8px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* A single bus-terminal image should not stretch across the page */
+.seo-section > .seo-images:has(figure:only-child) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.seo-section > .seo-images:has(figure:only-child) .seo-gallery-image {
+  max-width: 520px;
+  height: 300px;
 }
 
 /* =========================
@@ -401,6 +494,7 @@ header.header {
 .hero-inner .btn {
   display: inline-block;
   margin-top: 12px;
+  margin-bottom: 0;
   padding: 12px 24px;
   background: #e85d04;
   color: #fff;
@@ -434,26 +528,6 @@ header.header {
   margin-bottom: 12px;
 }
 
-.top-cta {
-  margin-top: 24px;
-  margin-bottom: 32px;
-}
-
-.top-cta-button {
-  display: inline-block;
-  padding: 14px 26px;
-  background-color: #e85d04;
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 6px;
-  text-align: center;
-}
-
-.top-cta-button:hover {
-  background-color: #c94c00;
-}
-
 /* =========================
    JOURNEY
 ========================= */
@@ -464,8 +538,8 @@ header.header {
   justify-content: center;
   gap: 20px;
   width: 70%;
-  margin: 20px 25% 20px 5%;
-  padding: 20px 0;
+  margin: 0 25% 20px 5%;
+  padding: 12px 0 20px;
   list-style: none;
 }
 
@@ -473,6 +547,7 @@ header.header {
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
   font-weight: 600;
 }
 
@@ -486,6 +561,7 @@ header.header {
   align-items: center;
   justify-content: center;
   min-width: 32px;
+  width: 32px;
   height: 32px;
   flex-shrink: 0;
   border-radius: 50%;
@@ -583,7 +659,7 @@ header.header {
     padding: 16px 5%;
   }
 
-  .header .nav {
+  header.header .nav {
     width: 100%;
     justify-content: flex-start;
     gap: 12px 20px;
@@ -634,7 +710,7 @@ header.header {
 
   .journey {
     width: 90%;
-    margin: 20px 5%;
+    margin: 0 5% 20px;
     gap: 8px;
   }
 
@@ -649,120 +725,36 @@ header.header {
   .journey li + li {
     padding-left: 8px;
   }
+
+  .seo-gallery-image {
+    height: 230px;
+  }
+
+  .seo-section > .seo-images:has(figure:only-child) .seo-gallery-image {
+    height: 260px;
+  }
 }
 
 /* =========================
    SMALL MOBILE
 ========================= */
 
-@media (max-width: 480px) {
-  .header .logo {
-    font-size: 22px;
-  }
-
-  .header .nav {
-    gap: 10px 16px;
-  }
-
-  .header .nav a {
-    font-size: 14px;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .content h1 {
-    font-size: 28px;
-  }
-
-  .content h2 {
-    font-size: 23px;
-  }
-
-  .seo-table {
-    font-size: 14px;
-  }
-
-  .seo-table th,
-  .seo-table td {
-    padding: 10px;
-  }
-
-  .site-footer {
-    padding: 35px 5% 20px;
-  }
-
-  .site-footer .footer-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px;
-  }
-}
-
-/* =========================
-   FOOD ROW MOBILE
-========================= */
-
 @media (max-width: 600px) {
   .food-row,
   .food-row-reverse {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    margin: 26px 0;
+  }
+
+  .food-row-reverse .seo-food-image,
+  .food-row-reverse .food-row-content {
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .seo-food-image {
     width: 100%;
-    max-width: none;
-    height: 220px;
+    height: 230px;
   }
-}
-/* =========================
-   HEADER NAVIGATION FIX
-========================= */
-
-header.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-}
-
-header.header .nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-}
-
-header.header .nav a {
-  display: inline-block;
-  white-space: nowrap;
-}
-
-@media (max-width: 768px) {
-  header.header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  header.header .nav {
-    width: 100%;
-    gap: 12px 20px;
-  }
-}
-/* Reduce space between the Order Food button and journey steps */
-
-.hero-inner {
-  padding-bottom: 0;
-}
-
-.hero-inner .btn {
-  margin-bottom: 0;
-}
-
-.journey {
-  margin-top: 0;
-  padding-top: 12px;
 }

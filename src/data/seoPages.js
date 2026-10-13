@@ -1186,20 +1186,273 @@ text: "Bangalore offers a wide variety of food choices, from traditional Karnata
     url: "/food/homemade-food/bangalore/",
     buttonText: "Explore Homemade Food"
   }
-},
-  {
-    category: "Bus Food",
-    subcategory: "KSRTC",
-    name: "KSRTC Food",
-    title: "KSRTC Bus Food Delivery – Order Food for Your Journey",
-    description:
-      "Order homemade meals and snacks for your KSRTC bus journey and collect them at selected stops.",
-    url: "/bus-food/ksrtc/",
-    intro:
-      "Travelling on a KSRTC bus? Pre-order homemade meals and snacks and collect them at your chosen stop.",
-    paragraph:
-      "KSRTC food delivery provides a convenient option for passengers travelling on KSRTC bus services who want to plan a meal during their journey. Long-distance bus trips can make regular meal breaks difficult, particularly when passengers have limited time at stops. By pre-ordering food, travellers can choose a suitable meal and collect it at a selected stop during the journey. Homemade meals, snacks and regional food can provide passengers with alternatives to the limited food options that may be available during a trip. This can be especially useful for families, students, working professionals and passengers travelling between cities in Karnataka. Planning food before departure also reduces the need to search for a restaurant or food outlet after the bus reaches a stop. KSRTC passengers can therefore combine their travel plans with a convenient food option and enjoy freshly prepared meals during their journey. For anyone travelling by KSRTC and looking for food along the route, pre-ordering a meal can make the trip more comfortable and organised.",
+},  
+
+{
+  category: "Bus Food",
+  subcategory: "KSRTC",
+  name: "KSRTC Food",
+  h1: "Explore Food Options for KSRTC Bus Journeys",
+  title: "KSRTC Bus Food Options | Meals for Your Journey",
+  description:
+    "Explore food options for KSRTC bus journeys. Discover meals, snacks and regional food choices, and check ordering and pickup availability before travelling.",
+  url: "/bus-food/ksrtc/",
+
+  primaryKeyword: "KSRTC bus food",
+
+  secondaryKeywords: [
+    "KSRTC food delivery",
+    "food for KSRTC bus journey",
+    "KSRTC bus meals",
+    "KSRTC travel food options",
+    "food ordering for bus travel",
+    "meals for long bus journeys",
+    "bus food pickup locations",
+    "food options for KSRTC passengers",
+    "KSRTC journey food",
+  ],
+
+  intro: [
+    "Planning food for a KSRTC bus journey can help make your travel experience more convenient. Exploring meal and snack options before departure allows you to consider your preferences and plan around your journey.",
+    "From South Indian meals and Karnataka food to rice dishes and snacks, travellers can explore different food choices depending on the available menu and location.",
+    "If you are travelling from Bangalore or another location in Karnataka, check the available food options, ordering arrangements and pickup details before relying on a service during your journey.",
+  ],
+
+  paragraph:
+    "KSRTC bus journeys connect travellers to destinations across Karnataka and beyond. Planning food for the journey can be helpful when travelling during breakfast, lunch or dinner hours. Depending on the food provider and location, travellers may be able to explore regional meals, rice dishes, snacks and other food options. Before ordering, check the menu, prices, ingredients, preparation time and collection instructions. Food ordering and pickup services are not necessarily available on every route or at every bus stop, so confirm the arrangements before travelling. Whether you are planning a short trip or a longer journey, checking your food options in advance can help you organise your travel meals more comfortably.",
+
+  sections: [
+    {
+      heading: "Explore Food Options for KSRTC Bus Journeys",
+      paragraphs: [
+        "Food planning is useful for travellers who want to organise meals around their bus schedule. Exploring available food options before departure can help you decide what to eat and when to arrange your meal.",
+        "Depending on the provider, menu choices may include regional meals, South Indian dishes, rice-based meals and snacks. Availability varies by location and provider.",
+        "Check the available options and collection arrangements before placing an order for your journey.",
+      ],
+      images: [
+        {
+          src: "/images/ksrtc-bus-terminal.jpeg",
+          alt: "KSRTC bus at a bus terminal",
+        },
+      ],
+    },
+
+    {
+      heading: "What Food Can You Explore for Your Journey?",
+      subsections: [
+        {
+          heading: "South Indian Food",
+          paragraphs: [
+            "Explore familiar South Indian dishes such as idli, dosa, upma, pongal and rice meals where available. Check the menu to see which options are offered for your journey.",
+          ],
+          image: {
+            src: "/images/south-indian.jpeg",
+            alt: "South Indian food including idli and dosa",
+          },
+        },
+        {
+          heading: "Karnataka Food",
+          paragraphs: [
+            "Discover traditional Karnataka dishes and regional meal options prepared by local food providers. Specific dishes and availability depend on the menu.",
+          ],
+          image: {
+            src: "/images/karnataka-food-meal.jpg",
+            alt: "Traditional Karnataka food meal",
+          },
+        },
+        {
+          heading: "Rice Meals and Biryani",
+          paragraphs: [
+            "Rice meals and biryani can be options to consider for lunch or dinner. Review portion sizes, ingredients and prices before ordering.",
+          ],
+          image: {
+            src: "/images/bus-journey-takeaway.jpeg",
+            alt: "Takeaway rice meal for a bus journey",
+          },
+        },
+        {
+          heading: "Snacks for Bus Travel",
+          paragraphs: [
+            "Snacks may be convenient between meals during a bus journey. Check the available choices and any storage or collection instructions provided by the seller.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Food Planning for Long-Distance KSRTC Journeys",
+      paragraphs: [
+        "Long-distance journeys may overlap with regular meal times. Thinking about meals before departure can help you plan whether to eat beforehand, carry suitable snacks or check for food options along the route.",
+        "If you plan to collect a meal during a stop, verify the collection location and timing. Allow enough time to collect your food without disrupting your travel schedule.",
+      ],
+    },
+
+    {
+      heading: "How to Check Food Availability",
+      items: [
+        {
+          heading: "Check Your Route",
+          text: "Identify your boarding location, destination and any planned stops where food collection might be possible.",
+        },
+        {
+          heading: "Explore the Menu",
+          text: "Review the available dishes, prices, ingredients and serving sizes before selecting a meal.",
+        },
+        {
+          heading: "Confirm Pickup Details",
+          text: "Check the exact collection point and confirm that the pickup arrangement is suitable for your journey.",
+        },
+        {
+          heading: "Review Order Timings",
+          text: "Check ordering deadlines and preparation times so you can plan around your departure and scheduled stops.",
+        },
+      ],
+    },
+
+    {
+      heading: "KSRTC Food Options for Travellers from Bangalore",
+      paragraphs: [
+        "Travellers departing from Bangalore can explore food options for their bus journeys and check which arrangements are available for their route.",
+        "If you are looking for broader information about food for bus travel, visit our Bus Food Delivery page or explore Bus Food Bangalore for location-specific information.",
+      ],
+    },
+
+    {
+      heading: "Food Choices for Different Travel Needs",
+      text:
+        "Different travellers may have different food preferences and schedules. Students, working professionals, families and individual travellers can consider suitable meal and snack options based on the available menu. Before choosing food for a journey, review the ingredients, portion sizes, prices and collection details. Availability and service arrangements depend on the food provider and location.",
+
+      table: [
+        {
+          food: "South Indian Meals",
+          bestFor: "Breakfast or main meals",
+          whatToCheck: "Available dishes and serving size",
+        },
+        {
+          food: "Karnataka Food",
+          bestFor: "Regional meal options",
+          whatToCheck: "Menu and ingredients",
+        },
+        {
+          food: "Rice Meals",
+          bestFor: "Lunch or dinner",
+          whatToCheck: "Portion size and price",
+        },
+        {
+          food: "Biryani",
+          bestFor: "A substantial meal",
+          whatToCheck: "Ingredients and availability",
+        },
+        {
+          food: "Snacks",
+          bestFor: "Between-meal breaks",
+          whatToCheck: "Packaging and storage instructions",
+        },
+      ],
+    },
+
+    {
+      heading: "Why Plan Your Bus Journey Food in Advance?",
+      items: [
+        {
+          heading: "Better Meal Planning",
+          text: "Consider meal times before departure and organise your food requirements around your schedule.",
+        },
+        {
+          heading: "Explore Regional Dishes",
+          text: "Discover Karnataka food and other regional choices where listed by food providers.",
+        },
+        {
+          heading: "Check Available Options",
+          text: "Review menus and prices before deciding which food options suit your preferences.",
+        },
+        {
+          heading: "Confirm Collection Details",
+          text: "Check the collection point, order deadline and pickup time before relying on a food service.",
+        },
+      ],
+    },
+  ],
+
+  relatedLinks: [
+    {
+      label: "Bus Food Delivery",
+      url: "/bus-food/",
+    },
+    {
+      label: "Bus Food Bangalore",
+      url: "/bus-food/bangalore/",
+    },
+    {
+      label: "Food Delivery in Bangalore",
+      url: "/food/bangalore/",
+    },
+    {
+      label: "Homemade Food Bangalore",
+      url: "/food/homemade-food/bangalore/",
+    },
+    {
+      label: "Karnataka Food",
+      url: "/food/karnataka/",
+    },
+  ],
+
+  faqs: [
+    {
+      question: "What is KSRTC bus food?",
+      answer:
+        "KSRTC bus food refers to food options travellers explore when planning meals for a journey on a KSRTC bus. Available services depend on the provider and location.",
+    },
+    {
+      question: "What food options can I explore for a KSRTC bus journey?",
+      answer:
+        "Depending on the provider, options may include South Indian meals, Karnataka dishes, rice meals, biryani and snacks. Check the available menu for your location.",
+    },
+    {
+      question: "Can I order food for a KSRTC bus journey?",
+      answer:
+        "Ordering options depend on the provider, route and location. Confirm whether a suitable service is available before placing an order.",
+    },
+    {
+      question: "Can I collect food at a KSRTC bus stop?",
+      answer:
+        "Pickup arrangements vary by provider and location. Confirm the exact collection point and timing before travelling.",
+    },
+    {
+      question: "Is food ordering available on every KSRTC route?",
+      answer:
+        "Food ordering is not necessarily available on every route or at every stop. Check the specific arrangements for your journey.",
+    },
+    {
+      question: "What should I check before ordering bus journey food?",
+      answer:
+        "Review the menu, prices, ingredients, serving sizes, order deadline, collection point and pickup time.",
+    },
+    {
+      question: "Can I find Karnataka food for my bus journey?",
+      answer:
+        "You can explore Karnataka food where it is listed by a food provider. Check the menu and availability before ordering.",
+    },
+    {
+      question: "When should I arrange food for my journey?",
+      answer:
+        "Check the provider's ordering deadline and preparation time in advance, and confirm the pickup details before departure.",
+    },
+    {
+      question: "Where can I learn more about bus food delivery?",
+      answer:
+        "Visit our Bus Food Delivery page and Bus Food Bangalore page for more information about food options for bus journeys.",
+    },
+  ],
+
+  cta: {
+    heading: "Explore Food Options for Your Bus Journey",
+    text:
+      "Browse our bus food pages and check the available meal options and collection details before you travel.",
+    buttonText: "Explore Bus Food Delivery",
+    url: "/bus-food/",
   },
+},
 
   {
     category: "Bus",

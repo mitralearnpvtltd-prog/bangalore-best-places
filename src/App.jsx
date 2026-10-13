@@ -45,7 +45,7 @@ function NotFound() {
 export default function App() {
   // Homepage: Bus Food Delivery
   const homePage = seoPages.find(
-    (page) => page.url === "/bus-food/"
+    (page) => page.url === "/bus-food/ksrtc/"
   );
 
   return (
