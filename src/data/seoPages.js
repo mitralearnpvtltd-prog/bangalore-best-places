@@ -1,6 +1,4 @@
 export const seoPages = [
-  
-
 {
   category: "Food",
   subcategory: "Core",
@@ -796,19 +794,197 @@ text: "Bangalore offers a wide variety of food choices, from traditional Karnata
   images: [],
 },
 
-  {
-    category: "Bus Food",
-    subcategory: "Core",
-    name: "Bus Food Delivery",
-    title: "Bus Food Delivery – Order Food During Your Journey",
-    description:
-      "Hungry during your bus journey? Order fresh meals and get them delivered at your bus stop.",
-    url: "/bus-food/",
-    intro:
-      "Plan your journey, pick a stop and pre-order a fresh meal so it is ready when your bus arrives.",
-    paragraph:
-      "Bus food delivery makes it easier to enjoy a fresh meal while travelling by bus. Long journeys can make finding suitable food difficult, especially when passengers have limited time at stops or do not know where to eat along the route. With bus food delivery, travellers can plan their meals before the journey and select a suitable stop for collection. Fresh meals and snacks can be ordered in advance so that the food is ready when the bus reaches the selected location. This can be useful for passengers travelling during lunch or dinner hours, families travelling together and anyone taking a long-distance bus journey. Instead of depending only on roadside food or carrying a meal from home, passengers can plan a convenient food option as part of their journey. Bus food delivery connects travel with local food choices and helps passengers enjoy freshly prepared meals during their trip. It is a practical way to make bus journeys more comfortable and convenient.",
-  },  
+{
+  category: "Bus Food",
+  subcategory: "Core",
+  name: "Bus Food Delivery",
+
+  h1: "Bus Food Delivery for Your Journey",
+  title: "Bus Food Delivery: Meals for Bus Travellers | Food Hub",
+  description:
+    "Explore bus food delivery options, plan meals before travelling and check food availability, pickup locations and timings for your journey.",
+
+  url: "/bus-food/",
+
+  primaryKeyword: "bus food delivery",
+
+  secondaryKeywords: [
+    "food delivery on bus",
+    "order food during bus journey",
+    "bus journey food",
+    "food for bus travellers",
+    "bus stop food pickup",
+    "online food ordering for bus travel",
+    "meals for long bus journeys",
+    "bus travel snacks",
+  ],
+
+  intro: [
+    "Planning food before a bus journey can make travelling more convenient. Explore meal and snack options, check the available services and organise your food around your travel schedule.",
+    "Whether you are travelling a short distance or taking a long-distance bus, choosing food in advance can help you prepare for meal times. Available dishes, ordering options and pickup arrangements depend on the service and location.",
+    "Use Food Hub to explore bus food options and check the details relevant to your journey. Confirm availability, prices, order deadlines and pickup instructions before placing an order.",
+  ],
+
+  paragraph:
+    "Bus food delivery helps travellers explore food options and plan meals around their journeys. Depending on the service, passengers may be able to browse available meals, place orders in advance and arrange collection at a designated stop. This can be useful for families, working professionals, students and other passengers travelling during breakfast, lunch or dinner hours. Before ordering, review the menu, prices, pickup location and timing to make sure the arrangements suit your route. Planning ahead can help reduce last-minute food searches during a busy journey. Food availability and delivery arrangements vary by provider and location, so check the details before confirming an order.",
+
+  sections: [
+    {
+      heading: "Why Plan Food for Your Bus Journey?",
+      paragraphs: [
+        "Bus journeys may include short stops or travel through unfamiliar locations, making it helpful to think about meals before departure. Planning ahead allows you to review food options and consider when and where you may be able to collect your order.",
+        "Food Hub helps travellers explore available food options and review relevant ordering details. Service availability depends on the provider, route and location.",
+      ],
+    },
+
+    {
+      heading: "What Food Can You Choose for Bus Travel?",
+      subsections: [
+        {
+          heading: "South Indian Meals",
+          paragraphs: [
+            "Explore South Indian meal options and regional favourites where available. Check the menu and packaging details to choose food that suits your journey.",
+          ],
+          image: {
+            src: "/images/south-indian-food-bus-travel.jpg",
+            alt: "South Indian meal options for bus travel",
+          },
+        },
+        {
+          heading: "North Indian Meals",
+          paragraphs: [
+            "Browse available North Indian dishes and meal combinations. Menu choices and serving sizes depend on the food provider.",
+          ],
+          image: {
+            src: "/images/north-indian-meal-travel.jpeg",
+            alt: "North Indian meal options for a bus journey",
+          },
+        },
+        {
+          heading: "Biryani and Rice Meals",
+          paragraphs: [
+            "Check available biryani and rice meal options for your trip. Review ingredients, portions and prices before ordering.",
+          ],
+          image: {
+            src: "/images/biryani-rice-meal-travel.jpg",
+            alt: "Biryani and rice meal for bus travel",
+          },
+        },
+        {
+          heading: "Snacks for Bus Journeys",
+          paragraphs: [
+            "Snacks can be useful between meals during a long journey. Explore available choices and check the provider's details before placing an order.",
+          ],
+          image: {
+            src: "/images/Snacks-for-Bus-Travel.jpg",
+            alt: "Snacks to consider for a bus journey",
+          },
+        },
+      ],
+    },
+
+    {
+      heading: "How Bus Food Delivery Works",
+      subsections: [
+        {
+          heading: "Explore Available Food",
+          paragraphs: [
+            "Browse the food options listed for your journey and review their descriptions, prices and serving details.",
+          ],
+        },
+        {
+          heading: "Check Your Route and Pickup Stop",
+          paragraphs: [
+            "Confirm whether food ordering is available for your route or selected stop. Pickup arrangements vary by service.",
+          ],
+        },
+        {
+          heading: "Review Ordering Timings",
+          paragraphs: [
+            "Check order deadlines, estimated preparation times and pickup instructions before confirming your selection.",
+          ],
+        },
+        {
+          heading: "Confirm Your Order Details",
+          paragraphs: [
+            "Review the selected food, total price, pickup location and timing before completing your order.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Food for Different Bus Journeys",
+      paragraphs: [
+        "The food you choose may depend on the duration of your trip and when you plan to travel. Consider meal options for journeys around breakfast, lunch or dinner, and check available snacks for travel between meals.",
+        "Families and groups may also want to review portion sizes and menu details in advance. Available choices depend on the provider and location.",
+      ],
+    },
+
+    {
+      heading: "Bus Food Delivery in Bangalore",
+      paragraphs: [
+        "Travellers departing from Bangalore can explore food options relevant to their bus journeys. Check the available route, boarding point or stop details before ordering.",
+        "For more location-specific information, explore our Bus Food Bangalore page and review the options available for your journey.",
+      ],
+    },
+
+    {
+      heading: "Frequently Asked Questions",
+      faqs: [
+        {
+          question: "What is bus food delivery?",
+          answer:
+            "Bus food delivery refers to food-ordering options for bus travellers. Available ordering, delivery and pickup arrangements depend on the service and location.",
+        },
+        {
+          question: "Can I order food before my bus journey?",
+          answer:
+            "Advance ordering may be available through some services. Check the provider's ordering deadlines and instructions before placing an order.",
+        },
+        {
+          question: "What food can I order for a bus journey?",
+          answer:
+            "Depending on availability, options may include meals, rice dishes, biryani and snacks. Check the menu for your selected service.",
+        },
+        {
+          question: "Can I collect food at a bus stop?",
+          answer:
+            "Pickup at a designated stop may be offered by some services. Confirm the exact location and collection time before ordering.",
+        },
+        {
+          question: "Is bus food delivery available on every route?",
+          answer:
+            "Availability depends on the provider, route and pickup location. Check the service details for your journey.",
+        },
+        {
+          question: "Can I find bus food options in Bangalore?",
+          answer:
+            "Explore our Bus Food Bangalore page for information about food options related to bus journeys from Bangalore.",
+        },
+        {
+          question: "Should I check the order timing before travelling?",
+          answer:
+            "Yes. Review the ordering deadline, pickup time, location and any instructions provided by the service.",
+        },
+      ],
+    },
+  ],
+
+  relatedLinks: [
+    {
+      label: "Bus Food Bangalore",
+      url: "/bus-food/bangalore/",
+    },
+  ],
+
+  cta: {
+    heading: "Ready to Explore Bus Food in Bangalore?",
+    text: "View bus food options and journey details for Bangalore.",
+    buttonText: "Explore Bus Food Bangalore",
+    url: "/bus-food/bangalore/",
+  },
+},
 {
   category: "Bus Food",
   subcategory: "Passenger Meals",

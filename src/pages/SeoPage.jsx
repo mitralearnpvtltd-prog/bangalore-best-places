@@ -11,10 +11,22 @@ export default function SeoPage({ page }) {
   const isBusFoodPage = page.category === "Bus Food";
   const h1Heading = page.h1 || page.name || page.title;
 
+  // Top CTA appears on the specified landing pages.
+  // Include both Bus Food pages.
   const showTopCta =
     page.url === "/food/bangalore/" ||
     page.url === "/food/home-chefs/bangalore/" ||
+    page.url === "/bus-food/" ||
     page.url === "/bus-food/bangalore/";
+
+  // Choose CTA destination and label by page category.
+  const defaultCtaUrl = isBusFoodPage
+    ? "/bus-food/bangalore/"
+    : "/food/homemade-food/bangalore/";
+
+  const defaultCtaText = isBusFoodPage
+    ? "Explore Bus Food Bangalore"
+    : "Order Food";
 
   return (
     <>
@@ -57,24 +69,29 @@ export default function SeoPage({ page }) {
             </div>
           )}
 
-          {/* Top CTA button */}
+          {/* Top CTA */}
           {showTopCta && (
             <div className="top-cta">
               <Link
                 className="cta-button top-cta-button"
-                to="/food/homemade-food/bangalore/"
+                to={defaultCtaUrl}
               >
-                Order Food
+                {defaultCtaText}
               </Link>
             </div>
           )}
         </div>
 
+        {/* Journey component for Bus Food pages */}
         {isBusFoodPage && <Journey />}
       </section>
 
       {/* Main page content */}
       <section className="content">
+        {/* Page-level paragraph */}
+        {page.paragraph && <p>{page.paragraph}</p>}
+
+        {/* Page sections */}
         {page.sections?.map((section, index) => (
           <section className="seo-section" key={index}>
             {section.heading && <h2>{section.heading}</h2>}
@@ -84,16 +101,16 @@ export default function SeoPage({ page }) {
               <p key={paragraphIndex}>{paragraph}</p>
             ))}
 
-            {/* Section call to action */}
+            {/* Section CTA */}
             {section.cta && (
               <div className="cta-section">
                 <p>{section.cta}</p>
 
                 <Link
                   className="cta-button"
-                  to="/food/homemade-food/bangalore/"
+                  to={defaultCtaUrl}
                 >
-                  Explore Homemade Food
+                  {section.cta}
                 </Link>
               </div>
             )}
@@ -105,6 +122,7 @@ export default function SeoPage({ page }) {
             {section.items?.map((item, itemIndex) => (
               <div key={item.heading || itemIndex}>
                 {item.heading && <h3>{item.heading}</h3>}
+
                 {item.text && <p>{item.text}</p>}
 
                 {item.paragraphs?.map((paragraph, paragraphIndex) => (
@@ -182,7 +200,7 @@ export default function SeoPage({ page }) {
               </div>
             ))}
 
-            {/* Bullet points */}
+            {/* Section bullet points */}
             {section.bullets?.length > 0 && (
               <ul className="features">
                 {section.bullets.map((bullet, bulletIndex) => (
@@ -253,14 +271,6 @@ export default function SeoPage({ page }) {
             )}
           </section>
         ))}
-
-        {/* Fallback for pages without sections */}
-        {!page.sections?.length && page.paragraph && (
-          <section className="seo-section">
-            <h2>{page.contentHeading || page.name}</h2>
-            <p>{page.paragraph}</p>
-          </section>
-        )}
       </section>
 
       {/* Page-level images */}
@@ -324,12 +334,9 @@ export default function SeoPage({ page }) {
 
           <Link
             className="cta-button"
-            to={
-              page.cta.url ||
-              "/food/homemade-food/bangalore/"
-            }
+            to={page.cta.url || defaultCtaUrl}
           >
-            {page.cta.buttonText || "Explore Homemade Food"}
+            {page.cta.buttonText || defaultCtaText}
           </Link>
         </section>
       )}
