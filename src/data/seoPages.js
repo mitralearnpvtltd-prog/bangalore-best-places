@@ -919,6 +919,29 @@ text: "Bangalore offers a wide variety of food choices, from traditional Karnata
         "The food you choose may depend on the duration of your trip and when you plan to travel. Consider meal options for journeys around breakfast, lunch or dinner, and check available snacks for travel between meals.",
         "Families and groups may also want to review portion sizes and menu details in advance. Available choices depend on the provider and location.",
       ],
+
+      table: [
+        {
+          food: "South Indian Meals",
+          bestFor: "Breakfast or main meals",
+          whatToCheck: "Available dishes and packaging",
+        },
+        {
+          food: "North Indian Meals",
+          bestFor: "Lunch or dinner",
+          whatToCheck: "Menu and serving size",
+        },
+        {
+          food: "Biryani and Rice Meals",
+          bestFor: "A substantial meal",
+          whatToCheck: "Ingredients, portion and price",
+        },
+        {
+          food: "Snacks",
+          bestFor: "Between-meal breaks",
+          whatToCheck: "Packaging and storage instructions",
+        },
+      ],
     },
 
     {

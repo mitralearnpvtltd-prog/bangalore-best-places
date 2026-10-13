@@ -211,7 +211,7 @@ export default function SeoPage({ page }) {
               </ul>
             )}
 
-            {/* Tables: supports two-column and three-column formats */}
+            {/* Tables: supports category/examples and food/bestFor formats */}
             {section.table?.length > 0 && (
               <div className="seo-table-wrapper">
                 {(() => {
@@ -251,18 +251,18 @@ export default function SeoPage({ page }) {
                           <tr key={rowIndex}>
                             {isCategoryTable ? (
                               <>
-                                <td>{row.category}</td>
-                                <td>{row.examples}</td>
+                                <td>{row.category ?? "—"}</td>
+                                <td>{row.examples ?? "—"}</td>
                               </>
                             ) : (
                               <>
-                                <td>{row.food}</td>
-                                <td>{row.bestFor}</td>
+                                <td>{row.food ?? "—"}</td>
+                                <td>{row.bestFor ?? "—"}</td>
                               </>
                             )}
 
                             {hasWhatToCheck && (
-                              <td>{row.whatToCheck || "—"}</td>
+                              <td>{row.whatToCheck ?? "—"}</td>
                             )}
                           </tr>
                         ))}
