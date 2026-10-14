@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import {
   Routes,
@@ -39,7 +38,8 @@ function NotFound() {
         That page does not exist.{" "}
         <Link to="/bus/bangalore/">
           Go to Bangalore Bus Tickets
-        </Link>.
+        </Link>
+        .
       </p>
     </section>
   );
@@ -73,7 +73,7 @@ export default function App() {
             }
           />
 
-          {/* All SEO pages and their direct URLs */}
+          {/* Automatically register every SEO page */}
           {seoPages
             .filter((page) => page.url !== "/")
             .map((page) => (
@@ -84,7 +84,7 @@ export default function App() {
               />
             ))}
 
-          {/* Handle unknown URLs */}
+          {/* Display a fallback for unknown URLs */}
           <Route
             path="*"
             element={<NotFound />}
