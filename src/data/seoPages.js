@@ -2541,21 +2541,317 @@ text: "Bangalore offers a wide variety of food choices, from traditional Karnata
   },
 },
 
-  {
-    category: "Bus Route",
-    subcategory: "Food",
-    name: "Bangalore to Hyderabad",
-    title: "Bangalore to Hyderabad Bus – Tickets & Food",
-    description:
-      "Book buses from Bangalore to Hyderabad and order food for your journey.",
-    url: "/bus/bangalore-to-hyderabad/",
-    intro:
-      "Overnight or daytime, plan your Bangalore to Hyderabad trip with bus options and fresh food along the way.",
-    paragraph:
-      "Travelling from Bangalore to Hyderabad by bus is a convenient option for passengers visiting the city for work, education, family commitments or leisure. The journey covers a long distance, so selecting a suitable bus timing and planning food can make the trip more comfortable. Travellers can compare available routes, departure times, boarding locations and stops before choosing their service. For longer journeys, having access to a fresh meal or snack can be especially useful when travelling through normal lunch or dinner hours. Passengers can pre-order food for a suitable stop and collect it during the journey rather than relying completely on roadside food options. This can be helpful for families, students, working professionals and regular travellers. Planning food before departure also means passengers can focus on their journey without worrying about where to find their next meal. A Bangalore to Hyderabad bus trip becomes easier to organise when travel timings, boarding details and meal requirements are considered together before departure.",
+{
+  category: "Bus Route",
+  subcategory: "Core",
+  name: "Bangalore to Hyderabad Bus",
+
+  h1: "Bangalore to Hyderabad Bus: Tickets, Route and Travel Guide",
+  title: "Bangalore to Hyderabad Bus Booking | Tickets & Timings",
+  description:
+    "Explore Bangalore to Hyderabad bus options, compare travel details and boarding points, and plan your journey. Check schedules and ticket availability before travelling.",
+
+  url: "/bus/bangalore-to-hyderabad/",
+
+  primaryKeyword: "Bangalore to Hyderabad bus",
+  secondaryKeywords: [
+    "Bangalore to Hyderabad bus booking",
+    "Bangalore to Hyderabad bus tickets",
+    "Bengaluru to Hyderabad bus",
+    "Bangalore to Hyderabad bus route",
+    "Bangalore to Hyderabad sleeper bus"
+  ],
+
+  intro:
+    "Planning a trip from Bangalore to Hyderabad? Compare available bus services, departure times and boarding points to find an option that suits your travel plans.",
+
+  paragraph:
+    "Before booking, check journey details, available facilities, luggage rules and ticket conditions. Schedules, fares and amenities may vary by operator and travel date.",
+
+  cta: {
+    text: "Explore Bus Travel Options",
+    buttonText: "Explore Bus Travel Options",
+    url: "/bus/bangalore/"
   },
 
-  {
+  sections: [
+    {
+      heading: "Bangalore to Hyderabad Bus Travel",
+      content:
+        "Bus travel is one way to get from Bengaluru to Hyderabad. Depending on the operator and travel date, you may find daytime or overnight services.",
+
+      paragraphs: [
+        "Compare departure times, boarding locations, drop-off points and estimated journey duration before choosing a ticket. Allow enough time to reach your boarding point, especially during busy traffic periods."
+      ],
+
+      table: {
+        headers: ["Travel Factor", "What to Consider"],
+        rows: [
+          {
+            details: "Departure time",
+            value: "Compare available schedules for your travel date."
+          },
+          {
+            details: "Boarding location",
+            value: "Choose a pickup point you can reach conveniently."
+          },
+          {
+            details: "Journey duration",
+            value: "Check the estimate shown for your selected service."
+          },
+          {
+            details: "Arrival planning",
+            value: "Consider your destination and onward transport in Hyderabad."
+          }
+        ]
+      }
+    },
+
+    {
+      heading: "Bangalore to Hyderabad Bus Route Details",
+      content:
+        "The route connects Bengaluru with Hyderabad across Karnataka and Telangana. The actual road route and journey duration can differ depending on the operator, traffic conditions and scheduled stops.",
+
+      image: "/images/bangalore-hyderabad-bus.jpg",
+      imageAlt: "Bus travelling on the Bangalore to Hyderabad route",
+
+      table: {
+        headers: ["Travel Detail", "Information"],
+        rows: [
+          {
+            details: "Starting city",
+            value: "Bangalore (Bengaluru), Karnataka"
+          },
+          {
+            details: "Destination",
+            value: "Hyderabad, Telangana"
+          },
+          {
+            details: "Journey duration",
+            value: "Check the estimate for your selected service"
+          },
+          {
+            details: "Departure time",
+            value: "Confirm the available schedule before booking"
+          },
+          {
+            details: "Boarding point",
+            value: "Check the exact pickup location on your ticket"
+          },
+          {
+            details: "Drop-off point",
+            value: "Choose a stop convenient for your destination"
+          },
+          {
+            details: "Ticket fare",
+            value: "Compare current fares for your travel date"
+          }
+        ]
+      }
+    },
+
+    {
+      heading: "Types of Buses Available",
+      content:
+        "Bus types and facilities depend on the operator and the service selected. Check the current listings to see which options are available for your journey.",
+
+      subsections: [
+        {
+          heading: "Choosing a Suitable Service",
+          content:
+            "Compare the facilities and travel conditions shown in each listing. Availability depends on the operator and your selected travel date.",
+
+          table: {
+            headers: ["Bus Type", "What to Check"],
+            rows: [
+              {
+                details: "Sleeper bus",
+                value: "Check berth type, departure time and listed facilities."
+              },
+              {
+                details: "Seater bus",
+                value: "Review the seat layout and estimated journey duration."
+              },
+              {
+                details: "Air-conditioned bus",
+                value: "Confirm air conditioning is included in the selected service."
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      heading: "Things to Check Before Booking",
+      content:
+        "Review your ticket details carefully before confirming a booking. Checking the important conditions in advance can make your travel day easier.",
+
+      subsections: [
+        {
+          heading: "Boarding and Drop-off Points",
+          content:
+            "Confirm the full pickup address, reporting time and destination stop. Check how you will reach the boarding point before leaving."
+        },
+        {
+          heading: "Ticket Rules and Luggage",
+          content:
+            "Read the cancellation policy, rescheduling conditions and luggage allowance. Contact the operator if any booking condition is unclear."
+        },
+        {
+          heading: "Facilities and Accessibility",
+          content:
+            "Check the amenities listed for your selected service and consider any accessibility requirements before booking."
+        }
+      ],
+
+      table: {
+        headers: ["Booking Detail", "What to Check"],
+        rows: [
+          {
+            details: "Boarding point",
+            value: "Confirm the full pickup address and reporting time."
+          },
+          {
+            details: "Drop-off point",
+            value: "Choose a stop convenient for your onward journey."
+          },
+          {
+            details: "Cancellation policy",
+            value: "Read the cancellation and rescheduling conditions."
+          },
+          {
+            details: "Luggage allowance",
+            value: "Check the operator's luggage rules before departure."
+          },
+          {
+            details: "Bus facilities",
+            value: "Review the amenities listed for your selected service."
+          }
+        ]
+      }
+    },
+
+    {
+      heading: "Planning Your Arrival in Hyderabad",
+      content:
+        "Hyderabad is a large city, so the most convenient drop-off point depends on where you need to go next. Check onward transport options and allow time for local traffic.",
+
+      image: "/images/hyderabad-charminar.jpeg",
+      imageAlt: "Charminar monument in Hyderabad",
+
+      paragraphs: [
+        "If you have time to explore, you could plan visits to landmarks such as Charminar or Golconda Fort. Consider your arrival time and local transport when planning your itinerary."
+      ],
+
+      table: {
+        headers: ["Planning Item", "Suggested Action"],
+        rows: [
+          {
+            details: "Arrival location",
+            value: "Check which drop-off point is closest to your destination."
+          },
+          {
+            details: "Local transport",
+            value: "Plan how you will travel onward after arrival."
+          },
+          {
+            details: "Sightseeing",
+            value: "Check opening details and travel time before visiting attractions."
+          }
+        ]
+      }
+    },
+
+    {
+      heading: "Travel Tips for Bangalore to Hyderabad",
+      content:
+        "Keep your ticket and operator contact details accessible on travel day. Arrive at your boarding point with enough time to locate the correct bus.",
+
+      paragraphs: [
+        "Carry essential items in your hand luggage, keep valuables secure and check for schedule updates before departure. If you arrive early in the morning, plan your onward transport in advance."
+      ],
+
+      table: {
+        headers: ["Travel Tip", "Why It Helps"],
+        rows: [
+          {
+            details: "Keep your ticket accessible",
+            value: "Makes it easier to check your booking and boarding details."
+          },
+          {
+            details: "Arrive early",
+            value: "Gives you time to locate the correct pickup point."
+          },
+          {
+            details: "Check schedule updates",
+            value: "Helps you respond to operator updates before departure."
+          },
+          {
+            details: "Plan onward transport",
+            value: "Makes arrival and travel within Hyderabad easier to organise."
+          }
+        ]
+      }
+    },
+
+    {
+      heading: "Frequently Asked Questions",
+      faqs: [
+        {
+          question: "How can I book a Bangalore to Hyderabad bus?",
+          answer:
+            "Compare services available for your travel date, review boarding and drop-off points, and follow the booking provider's instructions to confirm your ticket."
+        },
+        {
+          question: "How long does the Bangalore to Hyderabad bus journey take?",
+          answer:
+            "Journey duration depends on the operator, route, traffic and stops. Check the estimated duration shown for your selected service before booking."
+        },
+        {
+          question: "Are overnight buses available from Bangalore to Hyderabad?",
+          answer:
+            "Overnight services may be available depending on the date and operator. Check current listings for departure times and bus types."
+        },
+        {
+          question: "Where do Bangalore to Hyderabad buses depart from?",
+          answer:
+            "Boarding points vary by operator and service. Confirm the exact pickup address and reporting time on your ticket."
+        },
+        {
+          question: "How much does a Bangalore to Hyderabad bus ticket cost?",
+          answer:
+            "Ticket prices vary by operator, bus type and travel date. Compare current fares for your chosen journey before booking."
+        },
+        {
+          question: "What should I check before boarding the bus?",
+          answer:
+            "Confirm your ticket, pickup location, reporting time, drop-off point, luggage allowance and cancellation conditions before departure."
+        }
+      ]
+    }
+  ],
+
+  relatedLinks: [
+    {
+      text: "Bangalore Bus Tickets",
+      url: "/bus/bangalore/"
+    },
+    {
+      text: "Bangalore Bus Booking",
+      url: "/bus/bangalore/booking/"
+    },
+    {
+      text: "Bangalore to Chennai Bus",
+      url: "/bus/bangalore-to-chennai/"
+    },
+    {
+      text: "Bangalore to Mysore Bus",
+      url: "/bus/bangalore-to-mysore/"
+    },
+  ],
+},
+{
     category: "Bus Route",
     subcategory: "Food",
     name: "Bangalore to Mangalore",

@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import SeoHead from "../components/SeoHead";
 import Journey from "../components/Journey";
@@ -9,9 +10,6 @@ export default function SeoPage({ page }) {
 
   const isBusFoodPage = page.category === "Bus Food";
   const isBusTicketsPage = page.url === "/bus/bangalore/";
-  const isBangaloreBusBookingPage =
-    page.url === "/bus/bangalore/booking/" ||
-    page.url === "/bus/bangalore/booking";
 
   const h1Heading = page.h1 || page.name || page.title;
 
@@ -27,46 +25,76 @@ export default function SeoPage({ page }) {
     "/bus/bangalore/booking",
     "/bus/bangalore-to-mysore/",
     "/bus/bangalore-to-chennai/",
+    "/bus/bangalore-to-hyderabad/",
   ].includes(page.url);
 
-  // Default CTA destinations.
-  const defaultCtaUrl = isBangaloreBusBookingPage
-    ? "/bus/bangalore/"
-    : isBusTicketsPage
-      ? "/bus/bangalore/booking/"
-      : isBusFoodPage
-        ? "/bus-food/bangalore/"
-        : "/food/homemade-food/bangalore/";
+  // CTA destinations.
+  const defaultCtaUrl = isBusTicketsPage
+    ? "/bus/bangalore/booking/"
+    : isBusFoodPage
+      ? "/bus-food/bangalore/"
+      : "/food/homemade-food/bangalore/";
 
-  // Default CTA labels.
-  const defaultCtaText = isBangaloreBusBookingPage
-    ? "Explore Bangalore Bus Tickets"
-    : isBusTicketsPage
-      ? "Explore Bus Travel Options"
-      : page.url === "/bus-food/ksrtc/"
-        ? "Explore Bus Food Delivery"
-        : isBusFoodPage
-          ? "Explore Bus Food Bangalore"
-          : "Order Food";
+  // CTA labels.
+  const defaultCtaText = isBusTicketsPage
+    ? "Explore Bus Travel Options"
+    : page.url === "/bus-food/ksrtc/"
+      ? "Explore Bus Food Delivery"
+      : isBusFoodPage
+        ? "Explore Bus Food Bangalore"
+        : "Order Food";
+
+  // Normalize image data from either a string or an object.
+  const normalizeImage = (image, fallbackAlt = "") => {
+    if (!image) return null;
+
+    if (typeof image === "string") {
+      return {
+        src: image,
+        alt: fallbackAlt,
+      };
+    }
+
+    if (typeof image === "object" && image.src) {
+      return {
+        src: image.src,
+        alt: image.alt || fallbackAlt,
+        caption: image.caption,
+      };
+    }
+
+    return null;
+  };
 
   // Reusable image gallery.
   const renderImages = (images, className = "seo-images") => {
-    if (!images?.length) {
+    if (!Array.isArray(images) || images.length === 0) {
       return null;
     }
 
+    const validImages = images
+      .map((image) => normalizeImage(image))
+      .filter(Boolean);
+
+    if (validImages.length === 0) return null;
+
     return (
       <div className={className}>
-        {images.map((image, index) => (
+        {validImages.map((image, index) => (
           <figure
             className="seo-image-card"
-            key={image.src || index}
+            key={`${image.src}-${index}`}
           >
             <img
               className="seo-gallery-image"
               src={image.src}
-              alt={image.alt || ""}
+              alt={image.alt}
               loading="lazy"
+              style={{
+                display: "block",
+                maxWidth: "100%",
+                height: "auto",
+              }}
             />
 
             {image.caption && (
@@ -76,6 +104,250 @@ export default function SeoPage({ page }) {
         ))}
       </div>
     );
+  };
+
+  // Normalize supported table formats.
+  const normalizeTable = (table) => {
+    if (!table) return null;
+
+    // Object format:
+    // { headers: ["Detail", "Information"], rows: [...] }
+    if (
+      !Array.isArray(table) &&
+      Array.isArray(table.rows)
+    ) {
+      const headers = Array.isArray(table.headers)
+        ? table.headers
+        : [];
+
+      const rows = table.rows.map((row) => {
+        if (Array.isArray(row)) {
+          return row;
+        }
+
+        if (row && typeof row === "object") {
+          return Object.values(row);
+        }
+
+        return [row ?? "—"];
+      });
+
+      return {
+        headers:
+          headers.length > 0
+            ? headers
+            : rows[0]?.map(
+                (_, index) => `Column ${index + 1}`
+              ) || [],
+        rows,
+      };
+    }
+
+    // Legacy array format.
+    if (Array.isArray(table) && table.length > 0) {
+      const firstRow = table[0];
+
+      if (!firstRow || typeof firstRow !== "object") {
+        return null;
+      }
+
+      // Bus-route table.
+      if (
+        firstRow.details !== undefined ||
+        firstRow.route !== undefined
+      ) {
+        const hasWhatToCheck = table.some(
+          (row) => row.whatToCheck !== undefined
+        );
+
+        return {
+          headers: hasWhatToCheck
+            ? ["Bus Route", "Journey Details", "What to Check"]
+            : ["Bus Route", "Journey Details"],
+          rows: table.map((row) =>
+            hasWhatToCheck
+              ? [
+                  row.category ?? row.route ?? "—",
+                  row.details ?? "—",
+                  row.whatToCheck ?? "—",
+                ]
+              : [
+                  row.category ?? row.route ?? "—",
+                  row.details ?? "—",
+                ]
+          ),
+        };
+      }
+
+      // Food-category table.
+      if (firstRow.category !== undefined) {
+        const hasWhatToCheck = table.some(
+          (row) => row.whatToCheck !== undefined
+        );
+
+        return {
+          headers: hasWhatToCheck
+            ? ["Food Category", "Examples", "What to Check"]
+            : ["Food Category", "Examples"],
+          rows: table.map((row) =>
+            hasWhatToCheck
+              ? [
+                  row.category ?? "—",
+                  row.examples ?? "—",
+                  row.whatToCheck ?? "—",
+                ]
+              : [
+                  row.category ?? "—",
+                  row.examples ?? "—",
+                ]
+          ),
+        };
+      }
+
+      // Food comparison table.
+      if (firstRow.food !== undefined) {
+        const hasWhatToCheck = table.some(
+          (row) => row.whatToCheck !== undefined
+        );
+
+        return {
+          headers: hasWhatToCheck
+            ? ["Food", "Best For", "What to Check"]
+            : ["Food", "Best For"],
+          rows: table.map((row) =>
+            hasWhatToCheck
+              ? [
+                  row.food ?? "—",
+                  row.bestFor ?? "—",
+                  row.whatToCheck ?? "—",
+                ]
+              : [
+                  row.food ?? "—",
+                  row.bestFor ?? "—",
+                ]
+          ),
+        };
+      }
+
+      // Generic legacy table.
+      const keys = Object.keys(firstRow);
+
+      return {
+        headers: keys.map((key) =>
+          key
+            .replace(/([A-Z])/g, " $1")
+            .replace(/^./, (letter) => letter.toUpperCase())
+        ),
+        rows: table.map((row) =>
+          keys.map((key) => row[key] ?? "—")
+        ),
+      };
+    }
+
+    return null;
+  };
+
+  // Render tables consistently across page types.
+  const renderTable = (table) => {
+    const normalized = normalizeTable(table);
+
+    if (
+      !normalized ||
+      normalized.headers.length === 0
+    ) {
+      return null;
+    }
+
+    return (
+      <div className="seo-table-wrapper">
+        <table className="seo-table">
+          <thead>
+            <tr>
+              {normalized.headers.map((header, index) => (
+                <th scope="col" key={index}>
+                  {header}
+                </th>
+              ))}
+            </tr>
+          </thead>
+
+          <tbody>
+            {normalized.rows.map((row, rowIndex) => (
+              <tr key={rowIndex}>
+                {normalized.headers.map((_, cellIndex) => (
+                  <td key={cellIndex}>
+                    {row[cellIndex] ?? "—"}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+  };
+
+  // Render a section or subsection image.
+  const renderSectionImage = (image, alt, heading) => {
+    const normalized = normalizeImage(
+      image,
+      alt || heading || ""
+    );
+
+    if (!normalized) return null;
+
+    return (
+      <figure className="seo-section-image">
+        <img
+          className="seo-gallery-image"
+          src={normalized.src}
+          alt={normalized.alt}
+          loading="lazy"
+          style={{
+            display: "block",
+            width: "100%",
+            maxWidth: "720px",
+            height: "auto",
+            margin: "20px 0",
+            borderRadius: "8px",
+          }}
+        />
+
+        {normalized.caption && (
+          <figcaption>{normalized.caption}</figcaption>
+        )}
+      </figure>
+    );
+  };
+
+  // Render paragraphs whether the field is a string or array.
+  const renderParagraphs = (content, keyPrefix = "paragraph") => {
+    if (!content) return null;
+
+    const paragraphs = Array.isArray(content)
+      ? content
+      : [content];
+
+    return paragraphs.map((paragraph, index) => (
+      <p key={`${keyPrefix}-${index}`}>{paragraph}</p>
+    ));
+  };
+
+  // Render FAQ items.
+  const renderFaqs = (faqs) => {
+    if (!Array.isArray(faqs) || faqs.length === 0) {
+      return null;
+    }
+
+    return faqs.map((faq, index) => (
+      <div
+        className="faq-item"
+        key={faq.question || index}
+      >
+        <h3>{faq.question}</h3>
+        <p>{faq.answer}</p>
+      </div>
+    ));
   };
 
   return (
@@ -107,16 +379,9 @@ export default function SeoPage({ page }) {
         <div className="hero-inner">
           <h1>{h1Heading}</h1>
 
-          {/* Intro paragraphs */}
           {page.intro && (
             <div className="seo-intro">
-              {Array.isArray(page.intro) ? (
-                page.intro.map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))
-              ) : (
-                <p>{page.intro}</p>
-              )}
+              {renderParagraphs(page.intro, "intro")}
             </div>
           )}
 
@@ -139,44 +404,98 @@ export default function SeoPage({ page }) {
 
       {/* Main page content */}
       <section className="content">
-        {page.paragraph && <p>{page.paragraph}</p>}
+        {renderParagraphs(page.paragraph, "page-paragraph")}
 
         {/* Page sections */}
         {page.sections?.map((section, index) => (
-          <section className="seo-section" key={index}>
+          <section
+            className="seo-section"
+            key={section.heading || index}
+          >
             {section.heading && <h2>{section.heading}</h2>}
 
-            {/* Section paragraphs */}
-            {section.paragraphs?.map((paragraph, paragraphIndex) => (
-              <p key={paragraphIndex}>{paragraph}</p>
-            ))}
+            {/* Section image: supports image as a string or object */}
+            {renderSectionImage(
+              section.image,
+              section.imageAlt,
+              section.heading
+            )}
 
-            {/* Section-level CTA */}
-            {section.cta && !isBusTicketsPage && (
+            {/* Section content and paragraphs */}
+            {section.content &&
+              renderParagraphs(
+                section.content,
+                `section-${index}-content`
+              )}
+
+            {section.paragraphs &&
+              renderParagraphs(
+                section.paragraphs,
+                `section-${index}-paragraph`
+              )}
+
+            {/* Section CTA */}
+            {section.cta && (
               <div className="cta-section">
-                <p>{section.cta}</p>
+                {typeof section.cta === "string" ? (
+                  <p>{section.cta}</p>
+                ) : (
+                  <>
+                    {section.cta.text && (
+                      <p>{section.cta.text}</p>
+                    )}
 
-                <Link
-                  className="cta-button"
-                  to={section.ctaUrl || defaultCtaUrl}
-                >
-                  {section.cta}
-                </Link>
+                    <Link
+                      className="cta-button"
+                      to={section.cta.url || defaultCtaUrl}
+                    >
+                      {section.cta.buttonText ||
+                        section.cta.text ||
+                        "Learn More"}
+                    </Link>
+                  </>
+                )}
+
+                {typeof section.cta === "string" && (
+                  <Link
+                    className="cta-button"
+                    to={section.ctaUrl || defaultCtaUrl}
+                  >
+                    {section.ctaButtonText || section.cta}
+                  </Link>
+                )}
               </div>
             )}
 
-            {section.text && <p>{section.text}</p>}
+            {section.text &&
+              renderParagraphs(
+                section.text,
+                `section-${index}-text`
+              )}
 
             {/* Generic section items */}
             {section.items?.map((item, itemIndex) => (
-              <div key={item.heading || itemIndex}>
+              <div
+                key={item.heading || itemIndex}
+                className="seo-item"
+              >
                 {item.heading && <h3>{item.heading}</h3>}
 
-                {item.text && <p>{item.text}</p>}
+                {item.content &&
+                  renderParagraphs(item.content)}
 
-                {item.paragraphs?.map((paragraph, paragraphIndex) => (
-                  <p key={paragraphIndex}>{paragraph}</p>
-                ))}
+                {item.text &&
+                  renderParagraphs(item.text)}
+
+                {item.paragraphs &&
+                  renderParagraphs(item.paragraphs)}
+
+                {item.image &&
+                  renderSectionImage(
+                    item.image,
+                    item.imageAlt,
+                    item.heading
+                  )}
 
                 {item.bullets?.length > 0 && (
                   <ul className="features">
@@ -185,69 +504,76 @@ export default function SeoPage({ page }) {
                     ))}
                   </ul>
                 )}
+
+                {item.table && renderTable(item.table)}
               </div>
             ))}
 
-            {/* Subsections with optional images */}
-            {section.subsections?.map((subsection, subsectionIndex) => (
-              <div
-                className={
-                  subsection.image
-                    ? `food-row ${
-                        subsectionIndex % 2 === 1
-                          ? "food-row-reverse"
-                          : ""
-                      }`
-                    : "food-row food-row-text-only"
-                }
-                key={subsection.heading || subsectionIndex}
-              >
-                {subsection.image && (
-                  <img
-                    className="seo-food-image"
-                    src={subsection.image.src}
-                    alt={
-                      subsection.image.alt ||
-                      subsection.heading ||
-                      ""
-                    }
-                    loading="lazy"
-                    width="440"
-                    height="300"
-                  />
-                )}
-
-                <div className="food-row-content">
+            {/* Subsections */}
+            {section.subsections?.map(
+              (subsection, subsectionIndex) => (
+                <div
+                  className="seo-subsection"
+                  key={subsection.heading || subsectionIndex}
+                >
                   {subsection.heading && (
                     <h3>{subsection.heading}</h3>
                   )}
 
-                  {subsection.paragraphs?.map(
-                    (paragraph, paragraphIndex) => (
-                      <p key={paragraphIndex}>{paragraph}</p>
-                    )
-                  )}
+                  {subsection.image &&
+                    renderSectionImage(
+                      subsection.image,
+                      subsection.imageAlt,
+                      subsection.heading
+                    )}
 
-                  {subsection.text && <p>{subsection.text}</p>}
+                  {subsection.content &&
+                    renderParagraphs(subsection.content)}
+
+                  {subsection.paragraphs &&
+                    renderParagraphs(subsection.paragraphs)}
+
+                  {subsection.text &&
+                    renderParagraphs(subsection.text)}
 
                   {subsection.bullets?.length > 0 && (
                     <ul className="features">
-                      {subsection.bullets.map((bullet, bulletIndex) => (
-                        <li key={bulletIndex}>{bullet}</li>
-                      ))}
+                      {subsection.bullets.map(
+                        (bullet, bulletIndex) => (
+                          <li key={bulletIndex}>{bullet}</li>
+                        )
+                      )}
                     </ul>
                   )}
-                </div>
-              </div>
-            ))}
 
-            {/* FAQs inside a section */}
-            {section.faqs?.map((faq, faqIndex) => (
-              <div key={faq.question || faqIndex}>
-                <h3>{faq.question}</h3>
-                <p>{faq.answer}</p>
-              </div>
-            ))}
+                  {subsection.table &&
+                    renderTable(subsection.table)}
+
+                  {subsection.items?.map(
+                    (item, itemIndex) => (
+                      <div
+                        key={item.heading || itemIndex}
+                        className="seo-item"
+                      >
+                        {item.heading && <h4>{item.heading}</h4>}
+
+                        {item.content &&
+                          renderParagraphs(item.content)}
+
+                        {item.text &&
+                          renderParagraphs(item.text)}
+
+                        {item.table &&
+                          renderTable(item.table)}
+                      </div>
+                    )
+                  )}
+
+                  {subsection.faqs &&
+                    renderFaqs(subsection.faqs)}
+                </div>
+              )
+            )}
 
             {/* Section bullet points */}
             {section.bullets?.length > 0 && (
@@ -258,89 +584,18 @@ export default function SeoPage({ page }) {
               </ul>
             )}
 
-            {/* Tables */}
-            {section.table?.length > 0 && (
-              <div className="seo-table-wrapper">
-                {(() => {
-                  const firstRow = section.table[0];
+            {/* Section table */}
+            {section.table && renderTable(section.table)}
 
-                  const isBusRouteTable =
-                    firstRow.details !== undefined ||
-                    section.heading ===
-                      "Popular Bus Routes from Bangalore";
-
-                  const isCategoryTable =
-                    !isBusRouteTable &&
-                    firstRow.category !== undefined;
-
-                  const hasWhatToCheck = section.table.some(
-                    (row) => row.whatToCheck !== undefined
-                  );
-
-                  return (
-                    <table className="seo-table">
-                      <thead>
-                        <tr>
-                          {isBusRouteTable ? (
-                            <>
-                              <th scope="col">Bus Route</th>
-                              <th scope="col">Journey Details</th>
-                            </>
-                          ) : isCategoryTable ? (
-                            <>
-                              <th scope="col">Food Category</th>
-                              <th scope="col">Examples</th>
-                            </>
-                          ) : (
-                            <>
-                              <th scope="col">Food</th>
-                              <th scope="col">Best For</th>
-                            </>
-                          )}
-
-                          {hasWhatToCheck && (
-                            <th scope="col">What to Check</th>
-                          )}
-                        </tr>
-                      </thead>
-
-                      <tbody>
-                        {section.table.map((row, rowIndex) => (
-                          <tr key={rowIndex}>
-                            {isBusRouteTable ? (
-                              <>
-                                <td>{row.category ?? "—"}</td>
-                                <td>{row.details ?? "—"}</td>
-                              </>
-                            ) : isCategoryTable ? (
-                              <>
-                                <td>{row.category ?? "—"}</td>
-                                <td>{row.examples ?? "—"}</td>
-                              </>
-                            ) : (
-                              <>
-                                <td>{row.food ?? "—"}</td>
-                                <td>{row.bestFor ?? "—"}</td>
-                              </>
-                            )}
-
-                            {hasWhatToCheck && (
-                              <td>{row.whatToCheck ?? "—"}</td>
-                            )}
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  );
-                })()}
+            {/* FAQs inside a section */}
+            {section.faqs?.length > 0 && (
+              <div className="faq-list">
+                {renderFaqs(section.faqs)}
               </div>
             )}
 
-            {/* Section images */}
+            {/* Section image gallery */}
             {renderImages(section.images)}
-
-            {/* Single section image */}
-            {section.image && renderImages([section.image])}
           </section>
         ))}
       </section>
@@ -365,7 +620,9 @@ export default function SeoPage({ page }) {
           <ul className="related">
             {page.relatedLinks.map((link, index) => (
               <li key={link.url || index}>
-                <Link to={link.url}>{link.label}</Link>
+                <Link to={link.url}>
+                  {link.text || link.label || link.name || link.url}
+                </Link>
               </li>
             ))}
           </ul>
@@ -378,15 +635,7 @@ export default function SeoPage({ page }) {
           <h2>Frequently Asked Questions</h2>
 
           <div className="faq-list">
-            {page.faqs.map((faq, index) => (
-              <div
-                className="faq-item"
-                key={faq.question || index}
-              >
-                <h3>{faq.question}</h3>
-                <p>{faq.answer}</p>
-              </div>
-            ))}
+            {renderFaqs(page.faqs)}
           </div>
         </section>
       )}
