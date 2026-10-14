@@ -9,9 +9,13 @@ export default function SeoPage({ page }) {
 
   const isBusFoodPage = page.category === "Bus Food";
   const isBusTicketsPage = page.url === "/bus/bangalore/";
+  const isBangaloreBusBookingPage =
+    page.url === "/bus/bangalore/booking/" ||
+    page.url === "/bus/bangalore/booking";
+
   const h1Heading = page.h1 || page.name || page.title;
 
-  // Show the top CTA only on selected landing pages.
+  // Show the top CTA on selected landing pages.
   const showTopCta = [
     "/food/bangalore/",
     "/food/home-chefs/bangalore/",
@@ -19,24 +23,31 @@ export default function SeoPage({ page }) {
     "/bus-food/bangalore/",
     "/bus-food/ksrtc/",
     "/bus/bangalore/",
+    "/bus/bangalore/booking/",
+    "/bus/bangalore/booking",
     "/bus/bangalore-to-mysore/",
+    "/bus/bangalore-to-chennai/",
   ].includes(page.url);
 
   // Default CTA destinations.
-  const defaultCtaUrl = isBusTicketsPage
-    ? "/bus/bangalore/booking/"
-    : isBusFoodPage
-      ? "/bus-food/bangalore/"
-      : "/food/homemade-food/bangalore/";
+  const defaultCtaUrl = isBangaloreBusBookingPage
+    ? "/bus/bangalore/"
+    : isBusTicketsPage
+      ? "/bus/bangalore/booking/"
+      : isBusFoodPage
+        ? "/bus-food/bangalore/"
+        : "/food/homemade-food/bangalore/";
 
   // Default CTA labels.
-  const defaultCtaText = isBusTicketsPage
-    ? "Explore Bus Travel Options"
-    : page.url === "/bus-food/ksrtc/"
-      ? "Explore Bus Food Delivery"
-      : isBusFoodPage
-        ? "Explore Bus Food Bangalore"
-        : "Order Food";
+  const defaultCtaText = isBangaloreBusBookingPage
+    ? "Explore Bangalore Bus Tickets"
+    : isBusTicketsPage
+      ? "Explore Bus Travel Options"
+      : page.url === "/bus-food/ksrtc/"
+        ? "Explore Bus Food Delivery"
+        : isBusFoodPage
+          ? "Explore Bus Food Bangalore"
+          : "Order Food";
 
   // Reusable image gallery.
   const renderImages = (images, className = "seo-images") => {
@@ -325,10 +336,10 @@ export default function SeoPage({ page }) {
               </div>
             )}
 
-            {/* Section images: images: [...] */}
+            {/* Section images */}
             {renderImages(section.images)}
 
-            {/* Section image: image: { src, alt } */}
+            {/* Single section image */}
             {section.image && renderImages([section.image])}
           </section>
         ))}
