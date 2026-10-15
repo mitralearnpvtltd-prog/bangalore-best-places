@@ -26,6 +26,7 @@ export default function SeoPage({ page }) {
     "/bus/bangalore-to-mysore/",
     "/bus/bangalore-to-chennai/",
     "/bus/bangalore-to-hyderabad/",
+    "/bus/bangalore-to-mangalore/",
   ].includes(page.url);
 
   // CTA destinations.

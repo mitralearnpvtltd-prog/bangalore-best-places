@@ -2851,20 +2851,302 @@ text: "Bangalore offers a wide variety of food choices, from traditional Karnata
     },
   ],
 },
-{
-    category: "Bus Route",
-    subcategory: "Food",
-    name: "Bangalore to Mangalore",
-    title: "Bangalore to Mangalore Bus – Tickets & Food",
-    description:
-      "Find buses from Bangalore to Mangalore and pre-order fresh meals for your journey.",
-    url: "/bus/bangalore-to-mangalore/",
-    intro:
-      "Travelling to the coast? Find Mangalore buses and enjoy a fresh homemade meal on the way.",
-    paragraph:
-      "The Bangalore to Mangalore bus route connects Karnataka's capital with the coastal city of Mangalore and is popular with tourists, students, families and regular travellers. Mangalore is known for its coastal culture, local cuisine and nearby attractions, making it a popular destination for both short visits and longer stays. Travellers can choose a bus based on their preferred departure time, boarding point and journey schedule. Since the route takes several hours, arranging food before departure can make the journey more convenient. Passengers can pre-order fresh meals or snacks for suitable stops and enjoy food during the trip without spending valuable time searching for a restaurant. This can be particularly helpful for families and passengers travelling around regular meal times. Planning both the bus and food requirements in advance allows travellers to enjoy a more organised journey from Bangalore to Mangalore. Whether the trip is for work, family, education or a coastal holiday, combining travel planning with meal arrangements can make the overall experience easier and more comfortable.",
-  },
 
+{
+  category: "Bus Route",
+  subcategory: "Core",
+  name: "Bangalore to Mangalore Bus",
+  h1: "Bangalore to Mangalore Bus Tickets and Travel Options",
+  title: "Bangalore to Mangalore Bus Booking | Routes & Travel Guide",
+  description:
+    "Explore Bangalore to Mangalore bus options, compare travel details and boarding points, and plan food for your journey. Check availability before travelling.",
+  url: "/bus/bangalore-to-mangalore/",
+
+  // Four food images stored in public/images/
+  images: [
+    {
+      src: "/images/mangalore-fish-curry.jpeg",
+      alt: "Mangalorean fish curry served with rice",
+      caption: "Traditional Mangalorean fish curry",
+    },
+    {
+      src: "/images/mangalore-neer-dosa.jpeg",
+      alt: "Neer dosa, a traditional coastal Karnataka dish",
+      caption: "Traditional Mangalorean neer dosa",
+    },
+    {
+      src: "/images/mangalore-chicken-ghee.jpeg",
+      alt: "Mangalorean chicken ghee roast with spices",
+      caption: "Mangalorean chicken ghee roast",
+    },
+    {
+      src: "/images/kori-roti.jpeg",
+      alt: "Traditional Mangalorean kori rotti with chicken curry",
+      caption: "Kori rotti with coastal-style chicken curry",
+    },
+  ],
+
+  primaryKeyword: "Bangalore to Mangalore bus",
+
+  secondaryKeywords: [
+    "Bangalore to Mangalore bus tickets",
+    "Bangalore to Mangalore bus booking",
+    "Bangalore to Mangalore bus timings",
+    "Bangalore to Mangalore bus route",
+    "bus from Bangalore to Mangalore",
+    "Bangalore to Mangalore travel options",
+    "food for bus travellers",
+    "food ordering for bus journeys",
+  ],
+
+  intro: [
+    "Planning a trip from Bangalore to Mangalore? Explore bus travel options and review important journey details before departure. Mangalore, also known as Mangaluru, is a coastal city in Karnataka known for its beaches, culture and regional cuisine.",
+    "Before choosing a bus, consider your preferred departure time, boarding point in Bangalore, expected journey duration and arrival location in Mangalore. Checking these details in advance can help you plan your journey.",
+    "Food is another consideration when travelling by bus. Depending on the available service, route and stop arrangements, you may be able to plan meals or snacks for your journey. Check the relevant details before placing any food order.",
+  ],
+
+  paragraph:
+    "The Bangalore to Mangalore bus route is a travel option for holidays, family visits, work-related journeys and trips to Karnataka's coast. Travellers can review available bus services, departure details, boarding points and arrival locations before making a decision. Journey times can vary depending on the selected route, traffic, road conditions and stops. Planning ahead can also help you organise meals and snacks around your travel schedule. If food ordering is available for your service or route, check the menu, prices, delivery instructions and timing before ordering. Always confirm your ticket details and travel arrangements with the relevant bus operator before departure.",
+
+  sections: [
+    {
+      heading: "Bangalore to Mangalore Bus Travel",
+      paragraphs: [
+        "Travelling from Bangalore to Mangalore by bus is an option for people planning holidays, coastal trips, family visits or work-related journeys. The service that suits you will depend on your preferred schedule, boarding point and travel requirements.",
+        "Compare available options and confirm the departure time, boarding location, arrival point and ticket conditions before completing your booking.",
+      ],
+    },
+
+    {
+      heading: "Bangalore to Mangalore Bus Journey Details",
+      paragraphs: [
+        "Use this checklist to compare the main details of your journey before booking. Actual schedules, fares and facilities depend on the selected operator and travel date.",
+      ],
+      table: [
+        {
+          category: "Travel route",
+          details: "Bangalore to Mangalore",
+        },
+        {
+          category: "Departure time",
+          details: "Check the operator's schedule for your travel date",
+        },
+        {
+          category: "Boarding point",
+          details: "Confirm the exact pickup location in Bangalore",
+        },
+        {
+          category: "Arrival point",
+          details: "Verify the scheduled drop-off location in Mangalore",
+        },
+        {
+          category: "Ticket price",
+          details: "Check the current fare before booking",
+        },
+        {
+          category: "Ticket conditions",
+          details: "Review cancellation, luggage and other applicable rules",
+        },
+        {
+          category: "Food arrangements",
+          details: "Confirm available meal options and ordering instructions",
+        },
+      ],
+    },
+
+    {
+      heading: "Discover Mangalore",
+      paragraphs: [
+        "Mangalore is known for its coastline, cultural attractions and regional cuisine. Visitors may include Panambur Beach, Tannirbhavi Beach and Kadri Manjunath Temple in their travel plans.",
+        "If you are travelling for sightseeing, consider your arrival time and plan how you will reach your destination from the bus arrival point.",
+      ],
+    },
+
+    {
+      heading: "What to Check Before Booking a Bus",
+      subsections: [
+        {
+          heading: "Departure Time",
+          paragraphs: [
+            "Review available departure times and choose an option that fits your plans. Schedules may vary by operator and travel date, so confirm the latest information before booking.",
+          ],
+        },
+        {
+          heading: "Boarding Point in Bangalore",
+          paragraphs: [
+            "Check the exact boarding location and allow enough time to reach it. Review the boarding instructions provided with your ticket.",
+          ],
+        },
+        {
+          heading: "Arrival Point in Mangalore",
+          paragraphs: [
+            "Confirm where the bus is scheduled to arrive in Mangalore and plan how you will reach your final destination.",
+          ],
+        },
+        {
+          heading: "Ticket Conditions",
+          paragraphs: [
+            "Review the ticket price, cancellation rules, luggage information and other applicable conditions before confirming your journey.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Food Options for Your Bus Journey",
+      paragraphs: [
+        "Planning meals before travelling can help you manage your schedule, especially when your departure overlaps with breakfast, lunch or dinner. Check which food options are available for your particular journey.",
+        "Food availability, ordering facilities and delivery arrangements depend on the relevant provider and service. Do not assume food delivery is available on every bus or at every stop.",
+      ],
+      subsections: [
+        {
+          heading: "South Indian Food",
+          paragraphs: [
+            "South Indian dishes may be an option when listed by the available food provider. Check the menu, ingredients and ordering details before selecting a meal.",
+          ],
+        },
+        {
+          heading: "Biryani and Other Meals",
+          paragraphs: [
+            "If biryani or other prepared meals are available, compare the listed options and confirm the price, portion details and collection or delivery instructions.",
+          ],
+        },
+        {
+          heading: "Coastal Food Options",
+          paragraphs: [
+            "Mangalore is known for its regional coastal cuisine. If you want to try local dishes, check available menus and confirm ingredients and prices before ordering.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Planning Your Journey from Bangalore to Mangalore",
+      paragraphs: [
+        "A little preparation can help you organise your journey. Keep your ticket information accessible, confirm your boarding point and check the latest travel details before leaving.",
+        "Road conditions and journey times can vary, particularly during rainy weather or periods of heavy traffic. Allow flexibility in your plans and check relevant updates before departure.",
+        "If you have onward travel plans in Mangalore, consider your expected arrival time and how you will reach your destination.",
+      ],
+    },
+
+    {
+      heading: "Food for Bus Travellers",
+      paragraphs: [
+        "Food arrangements for bus travellers may differ depending on the operator, route and available stops. If you plan to order food during your journey, confirm whether the service supports your route and boarding or stopping point.",
+        "Check order cut-off times, payment details, pickup or delivery instructions and applicable restrictions. Place an order only after confirming that the arrangements suit your journey.",
+      ],
+    },
+
+    {
+      heading: "How to Plan Your Bus Journey",
+      subsections: [
+        {
+          heading: "Choose Your Travel Option",
+          paragraphs: [
+            "Explore available bus services and compare their schedules, boarding locations and ticket conditions.",
+          ],
+        },
+        {
+          heading: "Confirm Your Journey Details",
+          paragraphs: [
+            "Check your travel date, departure time, boarding point and arrival location before completing your booking.",
+          ],
+        },
+        {
+          heading: "Plan Your Meals",
+          paragraphs: [
+            "Consider your meal schedule and review any available food-ordering options. Confirm availability and delivery instructions before placing an order.",
+          ],
+        },
+        {
+          heading: "Prepare for Departure",
+          paragraphs: [
+            "Keep your ticket and relevant travel information ready. Follow the boarding instructions provided by your bus operator.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Frequently Asked Questions",
+      faqs: [
+        {
+          question: "How can I explore Bangalore to Mangalore bus options?",
+          answer:
+            "Review available bus services, departure details, boarding points and ticket conditions. Confirm the latest information with the relevant operator before booking.",
+        },
+        {
+          question: "How do I check Bangalore to Mangalore bus timings?",
+          answer:
+            "Check available schedules for your travel date and verify the departure time with the bus operator, as timings may vary.",
+        },
+        {
+          question: "Where can I find my bus boarding point in Bangalore?",
+          answer:
+            "Check your ticket and the operator's boarding instructions for the exact location. Plan your arrival at the boarding point accordingly.",
+        },
+        {
+          question: "How should I plan food for my bus journey?",
+          answer:
+            "Consider your travel schedule and check available meal options in advance. If food ordering is supported, confirm the menu, timing and collection or delivery instructions.",
+        },
+        {
+          question: "Can I order food while travelling from Bangalore to Mangalore?",
+          answer:
+            "Food ordering depends on the service, route, provider and available stops. Confirm that ordering is supported for your journey before placing an order.",
+        },
+        {
+          question: "What should I check before booking my bus ticket?",
+          answer:
+            "Review the travel date, departure time, boarding point, arrival location, ticket price and applicable cancellation or travel conditions.",
+        },
+        {
+          question: "Can bus timings and ticket prices change?",
+          answer:
+            "Schedules and prices may vary by operator, travel date and service. Check the latest details before confirming your booking.",
+        },
+      ],
+    },
+
+    {
+      heading: "Plan Your Bangalore to Mangalore Journey",
+      paragraphs: [
+        "Explore available bus travel options, confirm your journey details and plan meals ahead of departure. Check the relevant service information to make decisions that suit your travel schedule.",
+      ],
+    },
+  ],
+
+  relatedLinks: [
+    {
+      label: "Bangalore Bus Tickets",
+      url: "/bus/bangalore/",
+    },
+    {
+      label: "Bangalore to Hyderabad Bus",
+      url: "/bus/bangalore-to-hyderabad/",
+    },
+    {
+      label: "Bangalore to Mysore Bus",
+      url: "/bus/bangalore-to-mysore/",
+    },
+    {
+      label: "Food Delivery in Bangalore",
+      url: "/food/bangalore/",
+    },
+    {
+      label: "Homemade Food Delivery in Bangalore",
+      url: "/food/homemade-food/bangalore/",
+    },
+  ],
+
+  cta: {
+    heading: "Ready to Plan Your Bangalore to Mangalore Journey?",
+    text:
+      "Review your bus options, confirm your boarding details and check available food arrangements before departure.",
+    buttonText: "Explore Bus Travel Options",
+    url: "/bus/bangalore/",
+  },
+},
   {
     category: "Bus Route",
     subcategory: "Food",
