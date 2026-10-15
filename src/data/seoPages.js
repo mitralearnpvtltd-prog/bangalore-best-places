@@ -3362,7 +3362,6 @@ text: "Bangalore offers a wide variety of food choices, from traditional Karnata
     },
   ],
 }, 
-
 {
   category: "Places",
   subcategory: "Core",
@@ -3615,20 +3614,226 @@ text: "Bangalore offers a wide variety of food choices, from traditional Karnata
     },
   ],
 },
-  {
-    category: "Travel",
-    subcategory: "Bangalore",
-    name: "Best Places Bangalore",
-    title: "Best Places to Visit in Bangalore",
-    description:
-      "Discover the best places to visit in Bangalore for families, couples, friends and solo travellers.",
-    url: "/places/bangalore/best-places/",
-    intro:
-      "Whether you are with family, a partner, friends or solo, here are the places worth visiting in Bangalore.",
-    paragraph:
-      "Bangalore has many places to visit, making it easy to create different kinds of city itineraries for families, friends, couples and solo travellers. Visitors can explore historic landmarks, gardens, cultural attractions, temples, markets and neighbourhoods that showcase the character of the city. Families may prefer spacious parks and attractions that are suitable for a relaxed day, while visitors interested in history and culture can explore Bangalore's heritage locations. Food is also an important part of discovering the city, with traditional Karnataka dishes, local snacks and regional specialities available across different neighbourhoods. Planning the best places to visit based on location can help travellers cover more attractions without spending too much time travelling between them. A simple itinerary can combine sightseeing with nearby food stops and rest breaks. Whether you are spending one day in Bangalore or planning a longer visit, choosing attractions according to your interests and available time can help create a more enjoyable city experience.",
+{
+  category: "Places",
+  subcategory: "Core",
+  name: "Best Places in Bangalore",
+  url: "/places/bangalore/best-places/",
+
+  h1: "Best Places to Visit in Bangalore",
+  title: "Best Places to Visit in Bangalore | Top Attractions",
+  description:
+    "Explore the best places to visit in Bangalore, from beautiful gardens and historic landmarks to cultural attractions and popular sightseeing spots.",
+
+  primaryKeyword: "best places to visit in Bangalore",
+
+  secondaryKeywords: [
+    "best places in Bangalore",
+    "top places to visit in Bangalore",
+    "Bangalore tourist attractions",
+    "best sightseeing places in Bangalore",
+    "famous places in Bangalore"
+  ],
+
+  // Top CTA button
+  topCta: {
+    text: "Explore Top Places",
+    url: "#top-places"
   },
 
+  intro: [
+    "Bangalore offers a mix of green spaces, historic landmarks, cultural attractions and lively neighbourhoods. Whether you are visiting for the first time or exploring your own city, there are plenty of places to discover.",
+
+    "From the landscaped paths of Lalbagh Botanical Garden to the architecture of Bangalore Palace, the city has attractions for different interests and age groups.",
+
+    "This guide covers some of the best places to visit in Bangalore, with ideas to help you plan your sightseeing around your available time and interests."
+  ],
+
+  // Quick overview table
+  table: {
+    title: "Best Places to Visit in Bangalore at a Glance",
+    headers: [
+      "Place",
+      "Category",
+      "Best for"
+    ],
+    rows: [
+      [
+        "Lalbagh Botanical Garden",
+        "Botanical garden",
+        "Nature and plant collections"
+      ],
+      [
+        "Cubbon Park",
+        "Public park",
+        "Walking and relaxing"
+      ],
+      [
+        "Bangalore Palace",
+        "Historical landmark",
+        "Architecture and heritage"
+      ],
+      [
+        "Vidhana Soudha",
+        "Architectural landmark",
+        "Architecture and photography"
+      ],
+      [
+        "ISKCON Temple Bangalore",
+        "Religious and cultural site",
+        "Culture and worship"
+      ]
+    ]
+  },
+
+  sections: [
+    {
+      heading: "Top Places to Visit in Bangalore",
+      id: "top-places",
+
+      paragraphs: [
+        "Start with a mix of gardens, heritage sites and cultural landmarks to experience different sides of Bangalore."
+      ],
+
+      subsections: [
+        {
+          heading: "Lalbagh Botanical Garden",
+
+          paragraphs: [
+            "Lalbagh Botanical Garden is known for its extensive plant collections, walking paths and green surroundings. It is a popular choice for visitors interested in nature and gardening."
+          ],
+
+          image: {
+            src: "/images/lalbagh-bangalore.jpeg",
+            alt: "Green spaces and landscaped gardens at Lalbagh Botanical Garden in Bangalore"
+          }
+        },
+
+        {
+          heading: "Cubbon Park",
+
+          paragraphs: [
+            "Cubbon Park offers tree-lined paths and open green spaces in central Bangalore. It is a convenient place to enjoy a walk or take a break from the busy city."
+          ],
+
+          image: {
+            src: "/images/cubbon-park-bangalore.jpeg",
+            alt: "Tree-lined walking paths at Cubbon Park in Bangalore"
+          }
+        },
+
+        {
+          heading: "Bangalore Palace",
+
+          paragraphs: [
+            "Bangalore Palace is a notable heritage attraction, recognised for its architecture and historic character. It is worth considering for visitors interested in the city's past."
+          ],
+
+          image: {
+            src: "/images/bangalore-palace.jpeg",
+            alt: "Historic architecture of Bangalore Palace"
+          }
+        },
+
+        {
+          heading: "Vidhana Soudha",
+
+          paragraphs: [
+            "Vidhana Soudha is one of Bangalore's most recognisable architectural landmarks. Visitors often admire its impressive exterior and distinctive design."
+          ],
+
+          image: {
+            src: "/images/vidhan-soudha.jpeg",
+            alt: "Vidhana Soudha architectural landmark in Bangalore"
+          }
+        },
+
+        {
+          heading: "ISKCON Temple Bangalore",
+
+          paragraphs: [
+            "ISKCON Temple Bangalore is a prominent religious and cultural destination. Visitors can explore the temple's surroundings while being mindful of its worship practices and visitor guidelines."
+          ]
+        }
+      ]
+    },
+
+    {
+      heading: "Best Places in Bangalore for Different Interests",
+
+      paragraphs: [
+        "For nature, consider Lalbagh Botanical Garden and Cubbon Park. For architecture and heritage, Bangalore Palace and Vidhana Soudha are well-known landmarks. For a cultural visit, ISKCON Temple Bangalore is another option."
+      ]
+    },
+
+    {
+      heading: "How to Plan Your Bangalore Sightseeing",
+
+      paragraphs: [
+        "Group attractions by area to reduce travel time. Check current opening hours, entry requirements and visitor guidelines before setting out, as these details can change."
+      ]
+    },
+
+    {
+      heading: "Frequently Asked Questions",
+
+      faqs: [
+        {
+          question: "What are the best places to visit in Bangalore?",
+          answer:
+            "Popular choices include Lalbagh Botanical Garden, Cubbon Park, Bangalore Palace, Vidhana Soudha and ISKCON Temple Bangalore."
+        },
+
+        {
+          question: "Which places in Bangalore are good for nature lovers?",
+          answer:
+            "Lalbagh Botanical Garden and Cubbon Park are well-known options for enjoying green spaces and outdoor walks."
+        },
+
+        {
+          question: "Can I visit multiple Bangalore attractions in one day?",
+          answer:
+            "Yes. Choose attractions in nearby areas and check their opening hours in advance to make your itinerary more manageable."
+        },
+
+        {
+          question: "Should I check timings before visiting Bangalore attractions?",
+          answer:
+            "Yes. Opening hours, entry rules and visitor access can vary, so check current information before your visit."
+        }
+      ]
+    },
+
+    // Bottom CTA section
+    {
+      heading: "Plan Your Visit to Bangalore",
+
+      paragraphs: [
+        "Explore Bangalore's gardens, heritage landmarks and cultural attractions to plan a memorable city visit. You can also discover more places and local experiences using our Bangalore travel guides."
+      ],
+
+      cta: {
+        text: "Explore Places in Bangalore",
+        url: "/places/bangalore/"
+      }
+    }
+  ],
+
+  relatedLinks: [
+    {
+      label: "Places to Visit in Bangalore",
+      url: "/places/bangalore/"
+    },
+    {
+      label: "Food in Bangalore",
+      url: "/food/bangalore/"
+    },
+    {
+      label: "Bangalore to Goa Bus",
+      url: "/bus/bangalore-to-goa/"
+    }
+  ]
+},
   {
     category: "Recipes",
     subcategory: "Karnataka",
