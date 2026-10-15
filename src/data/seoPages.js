@@ -3148,33 +3148,473 @@ text: "Bangalore offers a wide variety of food choices, from traditional Karnata
   },
 },
   {
-    category: "Bus Route",
-    subcategory: "Food",
-    name: "Bangalore to Goa",
-    title: "Bangalore to Goa Bus – Tickets & Food",
-    description:
-      "Plan your Bangalore to Goa bus trip with tickets, travel information and food.",
-    url: "/bus/bangalore-to-goa/",
-    intro:
-      "Start your Goa holiday right. Plan your bus trip and pre-order meals for the long ride.",
-    paragraph:
-      "The Bangalore to Goa bus journey is a popular option for travellers planning a holiday, weekend trip or visit to India's well-known coastal destination. Goa attracts visitors with its beaches, food, culture and relaxed travel experiences, while the journey from Bangalore can take several hours. Choosing the right bus timing, boarding point and route is therefore an important part of planning the trip. Since passengers may travel through lunch or dinner hours, arranging food before departure can also make the journey more convenient. Fresh meals and snacks can be pre-ordered for suitable stops so travellers can enjoy food without depending entirely on roadside options. This is useful for groups of friends, families, couples and solo travellers preparing for a longer bus journey. Planning meals in advance also gives passengers one less thing to worry about during the trip. A Bangalore to Goa bus journey can be organised more comfortably by considering transportation, timing, stops and food together before starting the trip.",
+  category: "Bus Route",
+  subcategory: "Food",
+  name: "Bangalore to Goa",
+  h1: "Bangalore to Goa Bus – Tickets, Travel & Food",
+  title: "Bangalore to Goa Bus | Tickets, Route & Food",
+  description:
+    "Plan your Bangalore to Goa bus journey with travel tips, ticket information, food options and meal planning for the road.",
+  url: "/bus/bangalore-to-goa/",
+
+  primaryKeyword: "Bangalore to Goa bus",
+
+  secondaryKeywords: [
+    "Bangalore to Goa bus tickets",
+    "Bangalore to Goa bus journey",
+    "Bangalore to Goa travel",
+    "Bangalore to Goa bus route",
+    "food for Bangalore to Goa bus",
+    "meal options for bus travellers",
+    "food pre-order for bus journey",
+    "Bangalore to Goa travel tips",
+  ],
+
+  intro: [
+    "Planning a trip from Bangalore to Goa? Prepare for your journey by checking bus tickets, departure timings, boarding points and food options before you travel. A little planning can make the trip more convenient.",
+    "Goa is known for its beaches, coastal cuisine, local culture and popular holiday destinations. Whether you are planning a weekend getaway, a family holiday or a trip with friends, organising your transportation and travel essentials in advance can help you get ready for the journey.",
+    "Since the Bangalore to Goa bus journey can take several hours, it is worth considering meal times and refreshments before departure. Explore the available food options through Food Hub and check the details for your route, location and journey before making arrangements.",
+  ],
+
+  paragraph:
+    "The Bangalore to Goa bus journey is a popular option for travellers planning a holiday, weekend getaway or visit to Goa's coastal attractions. Before travelling, check your ticket details, departure schedule, boarding point and expected travel time. Food planning is also useful for longer journeys, particularly when travelling during lunch or dinner hours. Depending on the bus operator and available services, passengers may be able to arrange meals in advance or carry suitable snacks and refreshments. Families, groups of friends, students and solo travellers can all benefit from preparing their travel essentials before departure. By considering transportation, meal options and travel timing together, you can organise a more comfortable journey from Bangalore to Goa.",
+
+  sections: [
+    {
+      heading: "Bangalore to Goa Bus Journey",
+      paragraphs: [
+        "Travelling from Bangalore to Goa by bus can be a convenient way to begin a holiday. Compare available services, review ticket details and choose a departure time that suits your plans.",
+        "Before leaving, confirm your boarding point, reporting time, luggage requirements and any instructions provided by your bus operator. Actual journey duration and route details depend on the selected service and travel conditions.",
+      ],
+    },
+
+    {
+      heading: "What to Prepare Before Your Journey",
+      subsections: [
+        {
+          heading: "Check Bus Tickets and Timings",
+          paragraphs: [
+            "Review your booking confirmation, departure time and boarding location before travelling. Keep your ticket details accessible and follow the bus operator's boarding instructions.",
+          ],
+        },
+        {
+          heading: "Plan Meals and Refreshments",
+          paragraphs: [
+            "Think about when you may need breakfast, lunch, dinner or snacks during the journey. Check whether meal pre-orders or suitable food stops are available for your selected service.",
+          ],
+        },
+        {
+          heading: "Carry Your Travel Essentials",
+          paragraphs: [
+            "Prepare drinking water where permitted, personal essentials and any items you may need during a long ride. Follow the bus operator's rules about luggage and food.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Food Options for Bangalore to Goa Bus Travellers",
+      paragraphs: [
+        "Planning food ahead can help you prepare for a journey that overlaps with regular meal times. Available options depend on the food provider, bus service, route and delivery arrangements.",
+      ],
+      subsections: [
+        {
+          heading: "South Indian Food",
+          paragraphs: [
+            "South Indian dishes can be an option for travellers who prefer familiar meals. Check the available menu and meal details before choosing.",
+          ],
+          image: {
+            src: "/images/south-indian-food.jpg",
+            alt: "South Indian meal options for bus travellers",
+          },
+        },
+        {
+          heading: "Biryani and Filling Meals",
+          paragraphs: [
+            "Browse available biryani and other meal options if you prefer a more substantial meal before or during your trip. Review portion details, ingredients and prices where provided.",
+          ],
+          image: {
+            src: "/images/biryani.jpg",
+            alt: "Biryani meal option for travellers",
+          },
+        },
+        {
+          heading: "Snacks for the Road",
+          paragraphs: [
+            "Snacks may be useful between meals during a longer bus ride. Choose options that are easy to carry and check any restrictions set by your bus operator.",
+          ],
+          image: {
+            src: "/images/karnataka-food.jpg",
+            alt: "Regional food and snack options for a journey",
+          },
+        },
+        {
+          heading: "Everyday Meals",
+          paragraphs: [
+            "Depending on availability, you may find everyday lunch or dinner options to suit your schedule. Check the menu and ordering details before making arrangements.",
+          ],
+          image: {
+            src: "/images/healthy-meals.jpg",
+            alt: "Everyday meal options for travellers",
+          },
+        },
+      ],
+    },
+
+    {
+      heading: "Why Plan Food Before Travelling?",
+      paragraphs: [
+        "Planning meals before departure can help you manage meal times during a long journey. It may also reduce the need to search for food at the last minute.",
+        "Check the food options, ordering instructions and availability for your route. Meal pre-orders and delivery services are not necessarily available on every bus or at every stop.",
+      ],
+    },
+
+    {
+      heading: "How Food Hub Can Help",
+      subsections: [
+        {
+          heading: "Explore Available Food",
+          paragraphs: [
+            "Browse the food categories available on Food Hub and review the menu descriptions to find options that suit your preferences.",
+          ],
+        },
+        {
+          heading: "Check Location and Availability",
+          paragraphs: [
+            "Review the service area, delivery location and route-related details where supported. Availability may vary by provider and destination.",
+          ],
+        },
+        {
+          heading: "Review Ordering Details",
+          paragraphs: [
+            "Before placing an order, confirm the selected items, prices, timing and any collection or delivery instructions provided by the service.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Tips for a Comfortable Bangalore to Goa Bus Trip",
+      paragraphs: [
+        "Confirm your bus details before departure, arrive at the boarding point on time and keep your essential belongings accessible. Check the expected travel duration and prepare for possible changes in traffic or road conditions.",
+        "Plan meals and refreshments around your schedule, follow the operator's travel rules and keep your ticket information handy. Preparing these details in advance can help you focus on enjoying your Goa trip.",
+      ],
+    },
+
+    {
+      heading: "Frequently Asked Questions",
+      faqs: [
+        {
+          question: "How can I plan a Bangalore to Goa bus journey?",
+          answer:
+            "Check your bus tickets, departure time, boarding point and expected travel duration. Plan your travel essentials and meal arrangements before departure.",
+        },
+        {
+          question: "How long does the Bangalore to Goa bus journey take?",
+          answer:
+            "Travel time depends on the bus service, selected route, stops and road conditions. Check your operator's journey details for the most relevant estimate.",
+        },
+        {
+          question: "Can I arrange food for my Bangalore to Goa bus trip?",
+          answer:
+            "Food arrangements depend on the available provider and bus service. Check whether meal pre-orders, collection options or suitable food stops are offered for your journey.",
+        },
+        {
+          question: "What food can I prepare for a long bus journey?",
+          answer:
+            "You can plan suitable meals and snacks based on your preferences and the bus operator's rules. Check any food restrictions and available meal services before travelling.",
+        },
+        {
+          question: "Should I plan meals before boarding the bus?",
+          answer:
+            "Planning meals in advance can help you prepare for lunch or dinner during a longer journey. Check available food services and their ordering times before departure.",
+        },
+        {
+          question: "Can I order food at a bus stop?",
+          answer:
+            "This depends on the food provider, stop location, route and available service. Confirm the delivery or collection instructions and timing before ordering.",
+        },
+        {
+          question: "What should I check before boarding a Bangalore to Goa bus?",
+          answer:
+            "Confirm your ticket, boarding location, departure time, luggage requirements and the operator's travel instructions before starting your journey.",
+        },
+      ],
+    },
+
+    {
+      heading: "Plan Your Bangalore to Goa Journey",
+      paragraphs: [
+        "Get ready for your trip by checking your bus details, organising travel essentials and reviewing suitable food options. Plan ahead so you can start your journey with fewer last-minute arrangements.",
+      ],
+      cta: "Explore Food Options",
+    },
+  ],
+
+  relatedLinks: [
+    {
+      label: "Food Delivery in Bangalore",
+      url: "/food/bangalore/",
+    },
+    {
+      label: "Homemade Food Delivery in Bangalore",
+      url: "/food/homemade-food/bangalore/",
+    },
+  ],
+}, 
+
+{
+  category: "Places",
+  subcategory: "Core",
+  name: "Places in Bangalore",
+  h1: "Best Places to Visit in Bangalore",
+  title: "Places to Visit in Bangalore | Attractions & Travel Guide",
+  description:
+    "Discover places to visit in Bangalore, including gardens, historic landmarks, cultural attractions and popular sightseeing destinations.",
+  url: "/places/bangalore/",
+
+  primaryKeyword: "places to visit in Bangalore",
+
+  secondaryKeywords: [
+    "best places to visit in Bangalore",
+    "Bangalore tourist places",
+    "Bangalore sightseeing places",
+    "places to see in Bangalore",
+    "parks in Bangalore",
+    "historical places in Bangalore",
+    "family places in Bangalore",
+    "weekend places in Bangalore",
+    "cultural attractions in Bangalore",
+  ],
+
+  topCta: {
+    text: "Explore Popular Places",
+    url: "#popular-places",
   },
 
-  {
-    category: "Travel",
-    subcategory: "Bangalore",
-    name: "Bangalore Tourist Places",
-    title: "Bangalore Tourist Places – Complete Travel Guide",
-    description:
-      "Explore the best tourist places, attractions, food and travel experiences in Bangalore.",
-    url: "/places/bangalore/",
-    intro:
-      "Palaces, parks, temples and cafés: a guide to the best things to see and eat in Bangalore.",
-    paragraph:
-      "Bangalore offers a wide range of tourist places for visitors interested in history, nature, architecture, culture, food and city experiences. The city is home to well-known attractions as well as parks, heritage locations, temples, markets and neighbourhoods that reveal different sides of Bangalore. Visitors can plan their day according to their interests and combine sightseeing with local food experiences. Places such as historic landmarks and green public spaces provide options for families, friends, couples and solo travellers. Exploring Bangalore also means discovering local cuisine, from traditional Karnataka dishes to popular snacks and regional specialities. A good travel plan can include attractions that are close to one another so visitors can make better use of their time. Whether you are visiting Bangalore for the first time or looking for new places to explore, planning the attractions, food stops and travel route together can make the experience easier. Bangalore's combination of modern city life, heritage and local culture makes it an interesting destination for different kinds of travellers.",
+  intro: [
+    "Looking for places to visit in Bangalore? Bengaluru offers a mix of green parks, historical landmarks, cultural attractions and lively neighbourhoods. Whether you are planning a family outing, a sightseeing trip or a relaxed weekend, you can explore places that match your interests.",
+    "The city combines a modern urban atmosphere with historic architecture, gardens and cultural destinations. Visitors can explore public parks, discover local heritage and experience different parts of Bangalore throughout the year.",
+    "Use this guide to explore popular places in Bangalore and plan your visit. Check current opening hours, entry requirements and travel information before visiting individual attractions.",
+  ],
+
+  paragraph:
+    "Places to visit in Bangalore range from landscaped gardens and public parks to historical buildings, temples and architectural landmarks. The best destinations for your trip depend on your interests, available time and preferred travel distance. Families may enjoy gardens and public spaces, while history and culture enthusiasts can explore heritage sites and religious landmarks. Planning your route in advance can help you make better use of your time while exploring Bangalore.",
+
+  table: {
+    title: "Popular Places to Visit in Bangalore",
+    headers: ["Place", "Type", "Best for"],
+    rows: [
+      [
+        "Lalbagh Botanical Garden",
+        "Botanical garden",
+        "Nature and plant collections",
+      ],
+      [
+        "Cubbon Park",
+        "Public park",
+        "Walking and relaxing",
+      ],
+      [
+        "Bangalore Palace",
+        "Historical landmark",
+        "Architecture and heritage",
+      ],
+      [
+        "Vidhana Soudha",
+        "Architectural landmark",
+        "Architecture and photography",
+      ],
+      [
+        "ISKCON Temple Bangalore",
+        "Religious and cultural site",
+        "Culture and worship",
+      ],
+    ],
   },
 
+  sections: [
+    {
+      heading: "Popular Places to Visit in Bangalore",
+      id: "popular-places",
+      paragraphs: [
+        "Bangalore has a variety of attractions for residents and visitors. You can plan a day around gardens, heritage buildings, cultural sites and popular public spaces.",
+        "Before visiting, check current timings, entry requirements and travel conditions, as details can vary by attraction.",
+      ],
+      subsections: [
+        {
+          heading: "Lalbagh Botanical Garden",
+          paragraphs: [
+            "Lalbagh Botanical Garden is known for its landscaped grounds, plant collections and glasshouse. It is a popular option for visitors interested in gardens, nature and leisurely walks.",
+          ],
+          image: {
+            src: "/images/lalbagh-bangalore.jpeg",
+            alt: "Gardens and green spaces at Lalbagh Botanical Garden in Bangalore",
+          },
+        },
+        {
+          heading: "Cubbon Park",
+          paragraphs: [
+            "Cubbon Park is a well-known green space in central Bangalore. Visitors can explore its walking paths and tree-lined areas while taking a break from the busy city.",
+          ],
+          image: {
+            src: "/images/cubbon-park-bangalore.jpeg",
+            alt: "Tree-lined paths at Cubbon Park in Bangalore",
+          },
+        },
+        {
+          heading: "Bangalore Palace",
+          paragraphs: [
+            "Bangalore Palace is a historic landmark recognised for its architecture and royal heritage. Check visitor information and access details before planning your visit.",
+          ],
+          image: {
+            src: "/images/bangalore-palace.jpeg",
+            alt: "Historic architecture of Bangalore Palace",
+          },
+        },
+        {
+          heading: "Vidhana Soudha",
+          paragraphs: [
+            "Vidhana Soudha is one of Bangalore's prominent architectural landmarks and houses the Karnataka Legislature. Visitors can appreciate its architecture from permitted public viewpoints and should follow applicable access restrictions.",
+          ],
+          image: {
+            src: "/images/vidhan-soudha.jpeg",
+            alt: "Vidhana Soudha architectural landmark in Bangalore",
+          },
+        },
+        {
+          heading: "ISKCON Temple Bangalore",
+          paragraphs: [
+            "ISKCON Temple Bangalore is a significant religious and cultural destination. Visitors should check temple timings, visitor guidelines and any special arrangements before travelling.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Nature and Parks in Bangalore",
+      paragraphs: [
+        "If you prefer outdoor activities, Bangalore has gardens and public green spaces where visitors can enjoy walking, spend time with family or take a break from urban surroundings.",
+        "Lalbagh Botanical Garden and Cubbon Park are two well-known options. Check current access information and park rules before planning your visit.",
+      ],
+    },
+
+    {
+      heading: "Historical and Cultural Places",
+      paragraphs: [
+        "Bangalore's history can be explored through its palaces, religious sites, museums and architectural landmarks. These places offer opportunities to learn about the city's heritage and cultural life.",
+        "Check opening schedules, photography rules and visitor access before visiting a historical or religious attraction.",
+      ],
+    },
+
+    {
+      heading: "Places to Visit in Bangalore with Family",
+      paragraphs: [
+        "Families can consider parks, gardens, museums and other attractions based on everyone's interests. Choose places with suitable facilities and allow enough time for travel between destinations.",
+        "Before leaving, review opening hours, ticket requirements and available amenities so you can plan your outing.",
+      ],
+    },
+
+    {
+      heading: "Tips for Planning Your Bangalore Visit",
+      subsections: [
+        {
+          heading: "Choose Places by Location",
+          paragraphs: [
+            "Group attractions in nearby areas to reduce unnecessary travel across the city. Check maps and traffic conditions before deciding on your route.",
+          ],
+        },
+        {
+          heading: "Check Timings and Entry Details",
+          paragraphs: [
+            "Opening hours, ticket requirements and visitor rules can differ between attractions. Verify current information before setting out.",
+          ],
+        },
+        {
+          heading: "Plan for Weather and Travel",
+          paragraphs: [
+            "Consider the weather and expected traffic when choosing your itinerary. Carry suitable essentials and leave enough time to travel between stops.",
+          ],
+        },
+      ],
+    },
+
+    {
+      heading: "Explore Bangalore's Local Food and Neighbourhoods",
+      paragraphs: [
+        "Your city visit can also include discovering local food, cafés, markets and neighbourhoods. Depending on your plans, you may choose to combine sightseeing with a meal or a visit to a shopping area.",
+        "Check available services and opening times before making specific plans.",
+      ],
+    },
+
+    {
+      heading: "Frequently Asked Questions",
+      faqs: [
+        {
+          question: "What are some popular places to visit in Bangalore?",
+          answer:
+            "Popular attractions include Lalbagh Botanical Garden, Cubbon Park, Bangalore Palace, Vidhana Soudha and ISKCON Temple Bangalore. Check visitor information before planning your trip.",
+        },
+        {
+          question: "Which parks can I visit in Bangalore?",
+          answer:
+            "Lalbagh Botanical Garden and Cubbon Park are well-known green spaces in Bangalore. Check their current timings and visitor guidelines before visiting.",
+        },
+        {
+          question: "Are there historical places to explore in Bangalore?",
+          answer:
+            "Bangalore Palace and other heritage and architectural landmarks offer ways to explore the city's history. Check access and visitor details before travelling.",
+        },
+        {
+          question: "What are some places to visit in Bangalore with family?",
+          answer:
+            "Families can consider parks, gardens, museums and other attractions according to their interests. Review facilities, timings and entry requirements before visiting.",
+        },
+        {
+          question: "How can I plan a Bangalore sightseeing trip?",
+          answer:
+            "Choose attractions based on location and available time, group nearby stops together, and check current opening hours and traffic conditions before leaving.",
+        },
+        {
+          question: "Do Bangalore attractions have entry fees?",
+          answer:
+            "Entry requirements and fees vary by attraction. Check official visitor information for current details before your visit.",
+        },
+        {
+          question: "When should I check attraction opening hours?",
+          answer:
+            "Check the latest opening hours and visitor guidelines before your trip because schedules and access arrangements may change.",
+        },
+      ],
+    },
+
+    {
+      heading: "Plan Your Visit to Bangalore",
+      paragraphs: [
+        "From gardens and parks to heritage landmarks and cultural destinations, Bangalore offers a range of places to explore. Choose attractions that match your interests, check the latest visitor information and plan your route before heading out.",
+      ],
+      cta: {
+        text: "Explore More Places in Bangalore",
+        url: "/places/bangalore/",
+      },
+    },
+  ],
+
+  relatedLinks: [
+    {
+      label: "Food Delivery in Bangalore",
+      url: "/food/bangalore/",
+    },
+    {
+      label: "Bangalore to Goa Bus",
+      url: "/bus/bangalore-to-goa/",
+    },
+    {
+      label: "Bangalore to Mangalore Bus",
+      url: "/bus/bangalore-to-mangalore/",
+    },
+  ],
+},
   {
     category: "Travel",
     subcategory: "Bangalore",
